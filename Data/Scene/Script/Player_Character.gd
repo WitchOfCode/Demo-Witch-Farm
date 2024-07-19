@@ -1,7 +1,7 @@
 extends Node2D
 
 # Player's movement speed (seconds per tile)
-var speed : float = 0.2
+var speed : float = 0.001
 
 # Grid size (based on sprite size)
 var grid_size : int = 16
