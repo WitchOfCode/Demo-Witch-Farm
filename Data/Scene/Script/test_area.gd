@@ -15,10 +15,18 @@ var tile_set_id : int = 0
 # (Uses Atlas Coords, which are basically coordinates on the TileSet).
 var tile_set_atlas_coord : Vector2 = Vector2(5, 3)
 
+# New variable to hold the player instance
+var player
+
 '''Ready loads when the script first loads.'''
 func _ready():
 	# Initializes the child nodes to be used.
 	scene_tile_map = get_node("TestTileMap")
+	
+	# Instance and add the player to the scene
+	player = load("res://Data/Scene/Object/Player_Character.tscn").instantiate()
+	add_child(player)
+	# player.position = scene_tile_map.map_to_world(Vector2(2, 2))  # Adjust initial position
 	
 '''Process loads every couple of frames.'''
 func _process(delta):
