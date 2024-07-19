@@ -1,7 +1,7 @@
 extends Node2D
 
 # Player's movement speed (seconds per tile)
-var speed : float = 0.001
+var speed : float = .001
 
 # Grid size (based on sprite size)
 var grid_size : int = 16
@@ -17,7 +17,7 @@ var direction : Vector2 = Vector2(0, 1)
 var is_moving : bool = false
 var animation_frame : int = 0
 var animation_timer : float = 0.0
-var animation_speed : float = 0.2
+var animation_speed : float = .1005
 
 # Load the sprite sheet
 func _ready():
@@ -70,13 +70,13 @@ func update_animation(delta):
 
 		match direction:
 			Vector2.RIGHT:
-				sprite.region_rect = Rect2(animation_frame * 16, 3 * 16, 16, 16)
+				sprite.region_rect = Rect2(animation_frame * 16, 4 * 16, 16, 16)
 			Vector2.LEFT:
 				sprite.region_rect = Rect2(animation_frame * 16, 2 * 16, 16, 16)
 			Vector2.UP:
-				sprite.region_rect = Rect2(animation_frame * 16, 1 * 16, 16, 16)
+				sprite.region_rect = Rect2(animation_frame * 16, 3 * 16, 16, 16)
 			Vector2.DOWN:
-				sprite.region_rect = Rect2(animation_frame * 16, 0 * 16, 16, 16)
+				sprite.region_rect = Rect2(animation_frame * 16, 1 * 16, 16, 16)
 	else:
 		match direction:
 			Vector2.RIGHT:
