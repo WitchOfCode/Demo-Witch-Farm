@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # Player's movement speed (seconds per tile)
 # @export adds to Inspector properties.
-@export var speed : int = 100
+@export var speed : float = 6
 
 # Flag for checking if player going out of bounds
 var out_of_bounds : bool = false
@@ -46,7 +46,7 @@ func _physics_process(delta):
 '''Handle player input and translate it into movement.'''
 func handle_input():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = moveDirection * speed
+	velocity = moveDirection * (speed * grid_size)
 	
 	# Redundant for now, keeping code inside script just in-case it's needed later, however.
 	'''if not is_moving:  # Only accept input if the player is not moving

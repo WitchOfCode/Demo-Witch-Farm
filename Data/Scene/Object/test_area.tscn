@@ -25,6 +25,7 @@ zoom = Vector2(1.4, 1.4)
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_ncy1s")]
 position = Vector2(16, 164)
+speed = 6.0
 
 [node name="OuterBound" type="StaticBody2D" parent="." groups=["outer_bounds"]]
 
