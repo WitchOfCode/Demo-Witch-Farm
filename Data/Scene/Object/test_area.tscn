@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3fge42up014e"]
+[gd_scene load_steps=4 format=3 uid="uid://d3fge42up014e"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/test_area.gd" id="1_eo7j3"]
 [ext_resource type="TileSet" uid="uid://crgsdg37lvcxy" path="res://Data/Tileset/test_area.tres" id="2_qdhx6"]
+[ext_resource type="PackedScene" uid="uid://cpqfb0bxbbhlk" path="res://Data/Scene/Object/Player_Character.tscn" id="3_ncy1s"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_eo7j3")
@@ -21,3 +22,11 @@ layer_3/tile_data = PackedInt32Array()
 [node name="TestCamera" type="Camera2D" parent="."]
 position = Vector2(161, 155)
 zoom = Vector2(1.4, 1.4)
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("3_ncy1s")]
+position = Vector2(16, 164)
+
+[node name="OuterBound" type="StaticBody2D" parent="." groups=["outer_bounds"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterBound"]
+polygon = PackedVector2Array(-80, -80, 400, -80, 400, 400, -80, 400, -80, -80, -253, 91, -242, 534, 587, 532, 548, -194, -230, -196, -251, 88)

@@ -24,8 +24,8 @@ func _ready():
 	scene_tile_map = get_node("TestTileMap")
 	
 	# Instance and add the player to the scene
-	player = load("res://Data/Scene/Object/Player_Character.tscn").instantiate()
-	add_child(player)
+	# player = load("res://Data/Scene/Object/Player_Character.tscn").instantiate()
+	# add_child(player)
 	# player.position = scene_tile_map.map_to_world(Vector2(2, 2))  # Adjust initial position
 	
 '''Process loads every couple of frames.'''
