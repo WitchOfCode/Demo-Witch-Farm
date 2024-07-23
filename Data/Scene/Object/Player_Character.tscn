@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://pgh6a0fgwkgi" path="res://Resources/Character_Sprite_Sheet.png" id="2_kjr7r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2to0u"]
-size = Vector2(20, 13)
+size = Vector2(18, 10)
 
 [node name="PlayerCharacter" type="CharacterBody2D"]
 script = ExtResource("1_0feuv")
@@ -13,5 +13,5 @@ script = ExtResource("1_0feuv")
 texture = ExtResource("2_kjr7r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3.5)
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_2to0u")

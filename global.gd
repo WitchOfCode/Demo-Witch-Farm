@@ -2,7 +2,7 @@
 extends Node
 
 # Specifies the layer numbers when interacting with the tilemap.
-var layer_floor = 1
-var layer_floorobj = 2
-var layer_wall = 3
-var layer_air = 4
+var layer_floor = 0
+var layer_floorobj = 1
+var layer_wall = 2
+var layer_air = 3
