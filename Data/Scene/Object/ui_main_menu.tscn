@@ -1,33 +1,34 @@
-[gd_scene format=3 uid="uid://bet0rn6idk20d"]
+[gd_scene load_steps=2 format=3 uid="uid://bet0rn6idk20d"]
 
-[node name="Control" type="Control"]
+[ext_resource type="Script" path="res://Data/Scene/Object/ui_main_menu.gd" id="1_plor4"]
+
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_plor4")
 
 [node name="GridContainer" type="GridContainer" parent="."]
-layout_mode = 0
-offset_right = 443.0
-offset_bottom = 284.0
-theme_override_constants/h_separation = 300
-columns = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="GridContainer"]
+[node name="Label" type="Label" parent="GridContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 100
+text = "WitchGame"
+horizontal_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="GridContainer/Panel"]
-layout_mode = 0
-offset_right = 126.0
-offset_bottom = 133.0
-
-[node name="Panel2" type="Panel" parent="GridContainer"]
+[node name="Button" type="Button" parent="GridContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Play"
 
-[node name="ColorRect" type="ColorRect" parent="GridContainer/Panel2"]
-layout_mode = 0
-offset_right = 123.0
-offset_bottom = 137.0
-color = Color(0.933245, 0.43737, 0.899043, 1)
+[connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]
