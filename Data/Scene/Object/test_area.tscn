@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3fge42up014e"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/test_area.gd" id="1_eo7j3"]
-[ext_resource type="TileSet" uid="uid://crgsdg37lvcxy" path="res://Data/Tileset/farm_tileset.tres" id="2_qdhx6"]
+[ext_resource type="TileSet" uid="uid://brefalgbgk4v" path="res://Data/Tileset/test_area.tres" id="2_qdhx6"]
 [ext_resource type="PackedScene" uid="uid://cpqfb0bxbbhlk" path="res://Data/Scene/Object/Player_Character.tscn" id="3_ncy1s"]
 
 [node name="Main" type="Node2D"]
