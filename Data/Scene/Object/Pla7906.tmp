@@ -193,10 +193,9 @@ size = Vector2(9, 4)
 script = ExtResource("1_0feuv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vstu8")
 animation = &"idle_down"
-frame_progress = 0.522782
+frame_progress = 0.606057
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 6)

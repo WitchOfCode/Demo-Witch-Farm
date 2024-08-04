@@ -16,8 +16,13 @@ var target_position : Vector2
 # Initial position in-case player movement needs to be restricted.
 var initial_position : Vector2
 
+# Decides which direction the sprite is idle in.
+var idle_direction : String = "idle_down"
+# Decides which direction the sprite is moving in.
+var move_direction : Vector2 = Vector2.ZERO
+
 # Sprite node
-@onready var sprite = $Sprite
+@onready var sprite = $AnimatedSprite2D
 
 # Animation variables
 var direction : Vector2 = Vector2(0, 1)
@@ -28,10 +33,7 @@ var animation_speed : float = .1005
 
 # Load the sprite sheet
 func _ready():
-	sprite.texture = load("res://Resources/Character_Sprite_Sheet.png")
-	sprite.region_enabled = true
-	sprite.region_rect = Rect2(0, 0, 16, 16)
-	target_position = position  # Initialize target position
+	pass
 
 func _process(delta):
 	pass
@@ -45,33 +47,33 @@ func _physics_process(delta):
 
 '''Handle player input and translate it into movement.'''
 func handle_input():
-	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = moveDirection * (speed * grid_size)
-	
-	# Redundant for now, keeping code inside script just in-case it's needed later, however.
-	'''if not is_moving:  # Only accept input if the player is not moving
-		if not out_of_bounds: # Does not update target position if player is out of
-			initial_position = position
-			if Input.is_action_pressed("ui_right"):
-				target_position.x += grid_size
-				direction = Vector2.RIGHT
-				is_moving = true
-			elif Input.is_action_pressed("ui_left"):
-				target_position.x -= grid_size
-				direction = Vector2.LEFT
-				is_moving = true
-			elif Input.is_action_pressed("ui_down"):
-				target_position.y += grid_size
-				direction = Vector2.DOWN
-				is_moving = true
-			elif Input.is_action_pressed("ui_up"):
-				target_position.y -= grid_size
-				direction = Vector2.UP
-				is_moving = true
-		else: #
-			target_position.x -= target_position.x
-			target_position.y -= target_position.x
-			out_of_bounds = false'''
+	# Checks for player input, and then sets the sprite accordingly.
+	if Input.is_action_pressed("ui_right") or Input.is_action_pressed("Right"):
+		sprite.play("walk_right")
+		idle_direction = "idle_right"
+		move_direction.x = speed
+		move_direction.y = 0
+	elif Input.is_action_pressed("ui_left") or Input.is_action_pressed("Left"):
+		sprite.play("walk_left")
+		idle_direction = "idle_left"
+		move_direction.x = -speed
+		move_direction.y = 0
+	elif Input.is_action_pressed("ui_up") or Input.is_action_pressed("Up"):
+		sprite.play("walk_up")
+		idle_direction = "idle_up"
+		move_direction.x = 0
+		move_direction.y = -speed
+	elif Input.is_action_pressed("ui_down") or Input.is_action_pressed("Down"):
+		sprite.play("walk_down")
+		idle_direction = "idle_down"
+		move_direction.x = 0
+		move_direction.y = speed
+	# If no input was pressed, play the current direction of the idle animation.
+	else:
+		sprite.play(idle_direction)
+		move_direction = Vector2.ZERO
+		
+	velocity = move_direction * grid_size
 
 '''Move the player towards the target position'''
 # Redundant for now, keeping code inside script just in-case it's needed later, however.
