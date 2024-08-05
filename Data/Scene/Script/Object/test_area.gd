@@ -24,7 +24,7 @@ func _ready():
 	# Initializes the child nodes to be used.
 	scene_tile_map = get_node(tile_map_name)
 	# Initializes the crop plot scene to this scene.
-	scene_crop_16x64 = load("res://Data/Scene/Object/env_crop_16x64.tscn")
+	scene_crop_16x64 = load("res://Data/Scene/Object/Environment/env_crop_16x64.tscn")
 	
 	# Instance and add the player to the scene
 	# player = load("res://Data/Scene/Object/Player_Character.tscn").instantiate()
@@ -93,5 +93,5 @@ func create_crop_instance():
 	add_child(itm_instance)
 	# Set its variables.
 	itm_instance.global_position = scene_tile_map.map_to_local(record_tile_pos)
-	itm_instance.set_seed(1)
+	itm_instance.set_seed(0)
 	itm_instance.grow_seed()

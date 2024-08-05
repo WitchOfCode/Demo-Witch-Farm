@@ -3,6 +3,8 @@ extends CharacterBody2D
 # Player's movement speed (seconds per tile)
 # @export adds to Inspector properties.
 @export var speed : float = 6
+# Player's inventory.
+@export var inv : Inventory
 
 # Flag for checking if player going out of bounds
 var out_of_bounds : bool = false

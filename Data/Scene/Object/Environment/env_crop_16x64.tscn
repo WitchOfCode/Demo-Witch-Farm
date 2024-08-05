@@ -1,18 +1,18 @@
 [gd_scene load_steps=8 format=3 uid="uid://cih7ca1sy568g"]
 
-[ext_resource type="Script" path="res://Data/Scene/Script/env_crop.gd" id="1_w2xh8"]
-[ext_resource type="Texture2D" uid="uid://bh5xq1re2omgb" path="res://Resources/crop-set-16x64.png" id="2_2fd54"]
+[ext_resource type="Script" path="res://Data/Scene/Script/Object/env_crop.gd" id="1_w2xh8"]
+[ext_resource type="Texture2D" uid="uid://bh5xq1re2omgb" path="res://Resources/Environment/crop-set-16x64.png" id="2_mlm6c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kra8s"]
-atlas = ExtResource("2_2fd54")
+atlas = ExtResource("2_mlm6c")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6235"]
-atlas = ExtResource("2_2fd54")
+atlas = ExtResource("2_mlm6c")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_87a4g"]
-atlas = ExtResource("2_2fd54")
+atlas = ExtResource("2_mlm6c")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m8qw6"]

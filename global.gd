@@ -12,13 +12,42 @@ var layer_air = 4
 const SEED_NAME : String = "Name" # Name of the crop growth sprite.
 const SEED_STAGES : String = "Stages" # How many stages there are in this crop.
 const SEED_TIMINGS : String = "Timings" # Timings of when the crop goes into the next stage.
+const SEED_YIELD: String = "Yield" # The item ID used when a crop is harvested.
+const SEED_YIELD_AMT : String = "Yield_Amt"
 
 # Nested Dictionary storing seed data based on ID.
 var dict_seed_data = {
-	1 : {
+	0 : {
 		SEED_NAME : "grow_wheat",
 		SEED_STAGES : 3,
-		SEED_TIMINGS : [2.2, 2.1, 1]
+		SEED_TIMINGS : [2.2, 2.1, 1],
+		SEED_YIELD : 1,
+		SEED_YIELD_AMT : 3
+	}
+}
+
+# Specifies the key names used for the dictionary of item data.
+const ITEM_IDENTIFIER : String = "Identifier" # Identifier used for sprite and indexing.
+const ITEM_NAME : String = "Name" # Name of the item sprite
+const ITEM_DESC : String = "Description"
+const ITEM_PRICE : String = "Price" # Price of the item, in-case its sold. If null, it's not supposed to be a sold item.
+const ITEM_SELL : String = "Sell" # How much an item sells for. If null, it's not supposed to be sellable.
+
+# Nested Dictionary storing item data based on ID.
+var dict_item_data = {
+	0 : {
+		ITEM_IDENTIFIER : "item_seed_wheat",
+		ITEM_NAME : "Wheat Seeds",
+		ITEM_DESC : "Seeds to grow some wheat!",
+		ITEM_PRICE : 2.25,
+		ITEM_SELL : null
+	},
+	1 : {
+		ITEM_IDENTIFIER : "item_wheat",
+		ITEM_NAME : "Wheat Stalks",
+		ITEM_DESC : "Stalks grown and harvested.",
+		ITEM_PRICE : 3.50,
+		ITEM_SELL : 3.25
 	}
 }
 

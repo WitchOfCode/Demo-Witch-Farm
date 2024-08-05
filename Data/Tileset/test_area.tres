@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://brefalgbgk4v"]
 
-[ext_resource type="Texture2D" uid="uid://dousp3f4cmm6p" path="res://Resources/Solaria Demo Tiles.png" id="1_snc5g"]
-[ext_resource type="PackedScene" uid="uid://cih7ca1sy568g" path="res://Data/Scene/Object/env_crop_16x64.tscn" id="3_qhirs"]
+[ext_resource type="Texture2D" uid="uid://dousp3f4cmm6p" path="res://Resources/Environment/Solaria Demo Tiles.png" id="1_snc5g"]
+[ext_resource type="PackedScene" uid="uid://cih7ca1sy568g" path="res://Data/Scene/Object/Environment/env_crop_16x64.tscn" id="3_qhirs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_30qfo"]
 resource_name = "environment_map"
