@@ -1,9 +1,10 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://brefalgbgk4v"]
 
 [ext_resource type="Texture2D" uid="uid://dousp3f4cmm6p" path="res://Resources/Solaria Demo Tiles.png" id="1_snc5g"]
-[ext_resource type="Texture2D" uid="uid://bh5xq1re2omgb" path="res://Resources/crop-set-16x64.png" id="2_e8o0l"]
+[ext_resource type="PackedScene" uid="uid://cih7ca1sy568g" path="res://Data/Scene/Object/env_crop_16x64.tscn" id="3_qhirs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_30qfo"]
+resource_name = "environment_map"
 texture = ExtResource("1_snc5g")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -1265,7 +1266,7 @@ texture = ExtResource("1_snc5g")
 12:14/0/physics_layer_0/angular_velocity = 0.0
 7:0/size_in_atlas = Vector2i(3, 3)
 7:0/0 = 0
-7:0/0/y_sort_origin = 1
+7:0/0/y_sort_origin = 7
 7:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:0/0/physics_layer_0/angular_velocity = 0.0
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.81945, 11.0243, -4.7247, 10.3943, 5.19718, 10.2369, 8.97694, 11.0243, 9.6069, 13.2292, 7.71702, 17.3239, 5.98463, 20.0012, 0.78745, 21.8911, -5.19717, 20.4737, -7.87451, 17.9539, -10.0794, 15.749, -10.8668, 12.4417)
@@ -1363,43 +1364,13 @@ texture = ExtResource("1_snc5g")
 6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:3/0/physics_layer_0/angular_velocity = 0.0
 6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.125, 14.9375, 6.75, 15.0625, 6.75, 5.5, -7, 5.6875)
-18:14/0 = 0
-18:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-18:14/0/physics_layer_0/angular_velocity = 0.0
-19:14/0 = 0
-19:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-19:14/0/physics_layer_0/angular_velocity = 0.0
-20:14/0 = 0
-20:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:14/0/physics_layer_0/angular_velocity = 0.0
-21:14/0 = 0
-21:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:14/0/physics_layer_0/angular_velocity = 0.0
+13:14/0 = 0
+13:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:14/0/physics_layer_0/angular_velocity = 0.0
+13:14/0/custom_data_1 = true
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkwgc"]
-texture = ExtResource("2_e8o0l")
-0:0/0 = 0
-0:0/0/y_sort_origin = -10
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/custom_data_1 = true
-1:0/0 = 0
-1:0/0/y_sort_origin = -10
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/custom_data_1 = true
-2:0/0 = 0
-2:0/0/y_sort_origin = -2
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.125, -0.5, -2, -0.75, 0.375, -0.5, 2.5, -0.375, 1.875, 4.75, -2.125, 5)
-2:0/0/custom_data_1 = true
-3:0/0 = 0
-3:0/0/y_sort_origin = 2
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.125, 2.375, -5.75, 3.25, -4.625, 6.125, 3.375, 6, 6, 2.875, 6, 2, 2.25, 1.125, -2.375, 1.25)
-3:0/0/custom_data_1 = true
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_psa7p"]
+scenes/1/scene = ExtResource("3_qhirs")
 
 [resource]
 tile_layout = 1
@@ -1418,4 +1389,4 @@ custom_data_layer_0/type = 1
 custom_data_layer_1/name = "seeded"
 custom_data_layer_1/type = 1
 sources/0 = SubResource("TileSetAtlasSource_30qfo")
-sources/1 = SubResource("TileSetAtlasSource_vkwgc")
+sources/1 = SubResource("TileSetScenesCollectionSource_psa7p")

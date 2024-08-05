@@ -9,22 +9,16 @@ var layer_wall = 3
 var layer_air = 4
 
 # Specifies the key names used for the dictionary of seed data.
-const SEED_NAME : String = "Name" # Name of the crop.
-const SEED_STAGES : String = "Stages" # Stage names that identify how much a crop has grown.
-const SEED_STAGES_FINAL : String = "Final" # Stage name to end the growth of crop.
+const SEED_NAME : String = "Name" # Name of the crop growth sprite.
+const SEED_STAGES : String = "Stages" # How many stages there are in this crop.
 const SEED_TIMINGS : String = "Timings" # Timings of when the crop goes into the next stage.
-const SEED_TILESET_ATLAS : String = "Atlas" # Atlas Coordinates used to define seed's sprite.
-const SEED_TILESET_ID : String = "T_ID" # Tile Set ID used to define the resource picture.
 
 # Nested Dictionary storing seed data based on ID.
 var dict_seed_data = {
 	1 : {
-		SEED_NAME : "Wheat",
-		SEED_STAGES : ["seed", "stub", "grown"],
-		SEED_TILESET_ATLAS : [Vector2(1, 0), Vector2(2, 0), Vector2(3, 0)],
-		SEED_TIMINGS : [2.2, 2.1],
-		SEED_STAGES_FINAL : "grown",
-		SEED_TILESET_ID : 1
+		SEED_NAME : "grow_wheat",
+		SEED_STAGES : 3,
+		SEED_TIMINGS : [2.2, 2.1, 1]
 	}
 }
 

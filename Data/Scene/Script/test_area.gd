@@ -8,6 +8,8 @@ var record_tile_pos : Vector2i
 # Variables and their specified type.
 # The tile map to be set when the script first starts.
 var scene_tile_map : TileMap
+# Crop scene to spawn in different objects.
+var scene_crop_16x64 : PackedScene
 # The name of the tile map node.
 @export var tile_map_name : String
 
@@ -21,6 +23,8 @@ var player
 func _ready():
 	# Initializes the child nodes to be used.
 	scene_tile_map = get_node(tile_map_name)
+	# Initializes the crop plot scene to this scene.
+	scene_crop_16x64 = load("res://Data/Scene/Object/env_crop_16x64.tscn")
 	
 	# Instance and add the player to the scene
 	# player = load("res://Data/Scene/Object/Player_Character.tscn").instantiate()
@@ -28,11 +32,11 @@ func _ready():
 	# player.position = scene_tile_map.map_to_world(Vector2(2, 2))  # Adjust initial position
 	
 '''Process loads every couple of frames.'''
-func _process(delta):
+func _process(_delta):
 	pass
 
 '''When input is registered in Main, run through the different inputs.'''
-func _input(event):
+func _input(_event):
 	# Uses the Input singleton to check the action done.
 	
 	# Checks the action when a left click has occured.
@@ -75,33 +79,19 @@ func seed_tile():
 	
 	# Checks tile validity. If tile is available, grow a seed.
 	if check_tile_validity(plot_tile_data, seed_tile_data):
-		grow_seed(record_tile_pos, 1, 0)
-			
-'''Grows a seed based on the data from the item dictionary.
-	Tile Position: Used to find the tile to modify.
-	Item ID: Used to index the item data dictionary.
-	Growth Level: Used to identify what stage seed is currently in.
-Currently recurses over tile until it is at the final stage.'''
-func grow_seed(tile_position, item_id, growth_level):
-	# Variables from dictionary:
-	# Actual item data
-	var item_value = Global.dict_seed_data[item_id]
-	# Stage that seed is currently in
-	var item_stage = item_value[Global.SEED_STAGES][growth_level]
-	# Atlas coord to replace the current tile.
-	var item_atlas_coord = item_value[Global.SEED_TILESET_ATLAS][growth_level]
-	# Tileset ID to use when setting cell.
-	var item_tile_set_id = item_value[Global.SEED_TILESET_ID]
+		# Sets the plot to a plot tile.
+		scene_tile_map.set_cell(Global.layer_plot, record_tile_pos, 0, Vector2i(13, 14))
+		# Instances a new crop
+		create_crop_instance()
+		
+'''Create a new crop instance.'''
+func create_crop_instance():
+	# Instantiate scene and set its variables.
+	var itm_instance = scene_crop_16x64.instantiate()
 	
-	# Sets the selected tile with the seed's atlas coord.
-	scene_tile_map.set_cell(Global.layer_floorobj, tile_position, item_tile_set_id, item_atlas_coord)
-	# Ensures that the current stage isn't the final one.
-	if item_stage == item_value[Global.SEED_STAGES_FINAL]:
-		return
-	var item_timing = item_value[Global.SEED_TIMINGS][growth_level]
-	
-	# Creates a timer in the tree, and awaits its timeout using the current item timing.
-	await get_tree().create_timer(item_timing).timeout
-	# Recurses, adding a growth level each loop.
-	grow_seed(tile_position, item_id, growth_level + 1)
-	
+	# Add new child to scene.
+	add_child(itm_instance)
+	# Set its variables.
+	itm_instance.global_position = scene_tile_map.map_to_local(record_tile_pos)
+	itm_instance.set_seed(1)
+	itm_instance.grow_seed()

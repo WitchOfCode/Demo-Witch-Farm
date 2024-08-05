@@ -35,13 +35,13 @@ var animation_speed : float = .1005
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
 	# move_player(delta)
 	# update_animation(delta)
 	
 '''Process which handles consistent tasks, such as movement.'''
-func _physics_process(delta):
+func _physics_process(_delta):
 	handle_input()
 	move_and_slide()
 
