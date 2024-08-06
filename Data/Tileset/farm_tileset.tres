@@ -1,7 +1,7 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://crgsdg37lvcxy"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bhrmftpxoit6v"]
 
-[ext_resource type="Texture2D" uid="uid://dousp3f4cmm6p" path="res://Resources/Solaria Demo Tiles.png" id="1_0by84"]
-[ext_resource type="Texture2D" uid="uid://bh5xq1re2omgb" path="res://Resources/crop-set-16x64.png" id="2_wq2ed"]
+[ext_resource type="Texture2D" uid="uid://dousp3f4cmm6p" path="res://Resources/Environment/Solaria Demo Tiles.png" id="1_0by84"]
+[ext_resource type="Texture2D" uid="uid://bh5xq1re2omgb" path="res://Resources/Environment/crop-set-16x64.png" id="2_wq2ed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_30qfo"]
 texture = ExtResource("1_0by84")

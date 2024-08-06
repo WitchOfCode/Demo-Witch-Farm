@@ -15,7 +15,8 @@ var scene_crop_16x64 : PackedScene
 
 # The TileSet ID that is used when selecting a TileMap.
 var tile_set_id : int = 0
-
+@onready var pause_menu = $TestCamera/PauseMenu
+var paused: bool = false
 # New variable to hold the player instance
 var player
 
@@ -45,7 +46,18 @@ func _input(_event):
 		update_positions()
 		# Seeds the tile after positions have been updated.
 		seed_tile()
-		
+	if Input.is_action_just_pressed("pause"):
+		pauseMenu()
+
+func pauseMenu():
+	if paused:
+		pause_menu.hide()	
+		Engine.time_scale = 1
+	else:
+		pause_menu.show()
+		Engine.time_scale = 0
+	paused = !paused
+	
 '''When called, update the positions of the record variables (mouse position, tilemap position, etc.).'''
 func update_positions():
 	record_mouse_pos = get_global_mouse_position()
