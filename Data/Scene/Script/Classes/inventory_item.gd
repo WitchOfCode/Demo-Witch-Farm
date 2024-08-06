@@ -1,6 +1,8 @@
 extends Resource
 
-class_name InvItem
+class_name InventoryItem
 
+# The item ID to reference data for the item.
 @export var item_id : int
-@export var texture : Texture2D
+# The Atlas texture to get item's visual from.
+@export var atlas_texture : AtlasTexture
