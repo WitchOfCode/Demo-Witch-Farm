@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pgh6a0fgwkgi"
-path="res://.godot/imported/Character_Sprite_Sheet.png-c3f679bf0e3d359a4c363b66d1390384.ctex"
+uid="uid://d172sg04dr2sh"
+path="res://.godot/imported/inventory-slot.png-4c42eac21304e3f18b04f775ba44579e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Character_Sprite_Sheet.png"
-dest_files=["res://.godot/imported/Character_Sprite_Sheet.png-c3f679bf0e3d359a4c363b66d1390384.ctex"]
+source_file="res://Resources/UI/inventory-slot.png"
+dest_files=["res://.godot/imported/inventory-slot.png-4c42eac21304e3f18b04f775ba44579e.ctex"]
 
 [params]
 

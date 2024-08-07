@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci8d4jvime6yh"]
+[gd_scene load_steps=2 format=3 uid="uid://c7civsqok5y4u"]
 
 [ext_resource type="TileSet" uid="uid://bhrmftpxoit6v" path="res://Data/Tileset/farm_tileset.tres" id="1_lqxut"]
 
-[node name="Farm2" type="Node2D"]
+[node name="Farm" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_lqxut")

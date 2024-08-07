@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://cih7ca1sy568g"]
+
+[ext_resource type="Script" path="res://Data/Scene/Script/Object/env_crop.gd" id="1_w2xh8"]
+[ext_resource type="Texture2D" uid="uid://bh5xq1re2omgb" path="res://Resources/Environment/crop-set-16x64.png" id="2_mlm6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kra8s"]
+atlas = ExtResource("2_mlm6c")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6235"]
+atlas = ExtResource("2_mlm6c")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87a4g"]
+atlas = ExtResource("2_mlm6c")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m8qw6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kra8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6235")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87a4g")
+}],
+"loop": true,
+"name": &"grow_wheat",
+"speed": 0.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"none",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4r3n8"]
+size = Vector2(14, 14)
+
+[node name="EnvCrop" type="Node2D"]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_w2xh8")
+
+[node name="GrowthSprite" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_m8qw6")
+animation = &"none"
+
+[node name="GrowthTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_4r3n8")
+
+[connection signal="timeout" from="GrowthTimer" to="." method="_on_growth_timer_timeout"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
