@@ -44,7 +44,15 @@ func set_seed(seed_id: int, owner_body: CharacterBody2D, set_stage: int = 1):
 	# Sets the owner of the crop.
 	owner_player = owner_body
 	# Sets the atlas resource to load when creating an item.
-	item_resource = load(Global.ITEM_RESOURCE_PATH + Global.dict_item_data[crop_seed_id][Global.ITEM_IDENTIFIER] + Global.PREFIX_RESOURCE)
+	item_resource = load_resource()
+	
+'''Loads a resource from the crop plots seed ID into the corresponding item ID.
+	Returns said resource for game to catch.'''
+func load_resource() -> Resource:
+	# Obtains the yield item ID from the seed data.
+	var yield_item_id = Global.dict_seed_data[crop_seed_id][Global.SEED_YIELD]
+	# Uses the load to return a resource from the generated path.
+	return load(Global.ITEM_RESOURCE_PATH + Global.dict_item_data[yield_item_id][Global.ITEM_IDENTIFIER] + Global.PREFIX_RESOURCE)
 
 '''If the crop has reached the final stage, it is done growing. Returns a boolean.'''
 func is_grown() -> bool:

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=4 format=3 uid="uid://blx3qb8iq4cqj"]
+
+[ext_resource type="Texture2D" uid="uid://q2ed1qvs77gb" path="res://Resources/Items/item_set_1.png" id="1_4q5s2"]
+[ext_resource type="Script" path="res://Data/Scene/Script/Classes/inventory_item.gd" id="1_rdpl7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ivrj"]
+atlas = ExtResource("1_4q5s2")
+region = Rect2(16, 0, 16, 16)
+filter_clip = true
+
+[resource]
+script = ExtResource("1_rdpl7")
+item_id = 1
+atlas_texture = SubResource("AtlasTexture_3ivrj")

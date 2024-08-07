@@ -24,3 +24,9 @@ func insert_item(item: InventoryItem):
 			empty_slots[0].slot_amount = 1
 	# Emit a signal update for the UI Inventory Slots.
 	update.emit()
+	
+func print_inventory():
+	for slot in inventory_slots:
+		if slot.slot_item:
+			print(slot.slot_item.item_id)
+			print(slot.slot_item.atlas_texture)
