@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://cpqfb0bxbbhlk"]
+[gd_scene load_steps=28 format=3 uid="uid://cpqfb0bxbbhlk"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/Player_Character.gd" id="1_0feuv"]
 [ext_resource type="Texture2D" uid="uid://pgh6a0fgwkgi" path="res://Resources/Entity/Character_Sprite_Sheet.png" id="2_1suij"]
 [ext_resource type="Resource" uid="uid://cfwc76fmg50jq" path="res://Data/Items/Resources/player_inventory.tres" id="2_whtge"]
+[ext_resource type="PackedScene" uid="uid://trqjtf8lawp6" path="res://Data/Scene/Object/UI/pause_menu.tscn" id="3_83kgt"]
 [ext_resource type="PackedScene" uid="uid://qg2igjqadh02" path="res://Data/Scene/Object/UI/ui_player_inventory.tscn" id="4_xirt0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6l0ko"]
@@ -207,6 +208,12 @@ shape = SubResource("RectangleShape2D_2to0u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+
+[node name="PauseMenu" parent="Camera2D" instance=ExtResource("3_83kgt")]
+offset_left = 3.0
+offset_top = -6.0
+offset_right = 3.0
+offset_bottom = -6.0
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_xirt0")]
 visible = false

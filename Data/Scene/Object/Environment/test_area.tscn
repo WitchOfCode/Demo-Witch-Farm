@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3fge42up014e"]
+[gd_scene load_steps=4 format=3 uid="uid://d3fge42up014e"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/test_area.gd" id="1_7yb4s"]
 [ext_resource type="TileSet" uid="uid://brefalgbgk4v" path="res://Data/Tileset/test_area.tres" id="2_m51fm"]
 [ext_resource type="PackedScene" uid="uid://cpqfb0bxbbhlk" path="res://Data/Scene/Object/Entity/Player_Character.tscn" id="3_sdjb7"]
-[ext_resource type="PackedScene" uid="uid://xa7x0dkdwwf7" path="res://Data/Scene/Object/UI/pause_menu.tscn" id="4_lb80k"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -31,23 +30,6 @@ layer_4/name = "Air"
 layer_4/y_sort_enabled = true
 layer_4/tile_data = PackedInt32Array()
 
-<<<<<<< HEAD
-[node name="TestCamera" type="Camera2D" parent="."]
-position = Vector2(161, 155)
-scale = Vector2(-2.10748, 0.96033)
-zoom = Vector2(2, 2)
-
-[node name="PauseMenu" parent="TestCamera" instance=ExtResource("4_lb80k")]
-visible = false
-top_level = true
-offset_left = -430.0
-offset_top = -145.0
-offset_right = -430.0
-offset_bottom = -145.0
-scale = Vector2(1, 1.00658)
-
-=======
->>>>>>> b1e84929435e7b90413f1707dd8c34ffcdb1f908
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_sdjb7")]
 z_index = 1
 position = Vector2(135, 180)

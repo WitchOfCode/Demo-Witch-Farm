@@ -15,7 +15,7 @@ var scene_crop_16x64 : PackedScene
 
 # Tthe TileSet ID that is used when selecting a TileMap.
 var tile_set_id : int = 0
-@onready var pause_menu = $TestCamera/PauseMenu
+@onready var pause_menu = $PlayerCharacter/Camera2D/PauseMenu
 var paused: bool = false
 # Nnew variable to hold the player instance
 @onready var player : CharacterBody2D = $PlayerCharacter
