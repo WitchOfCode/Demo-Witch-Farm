@@ -24,8 +24,10 @@ offset_bottom = 16.0
 [node name="DisplayPanel" type="Panel" parent="DisplayCenterContainer"]
 layout_mode = 2
 
-[node name="ItemDisplay" type="Sprite2D" parent="DisplayCenterContainer/DisplayPanel"]
-region_enabled = true
+[node name="ItemDisplay" type="TextureRect" parent="DisplayCenterContainer/DisplayPanel"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 8.0
 
 [node name="ItemLabel" type="Label" parent="DisplayCenterContainer/DisplayPanel"]
 layout_mode = 0

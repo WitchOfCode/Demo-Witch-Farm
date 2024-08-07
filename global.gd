@@ -21,8 +21,8 @@ var dict_seed_data = {
 		SEED_NAME : "grow_wheat",
 		SEED_STAGES : 3,
 		SEED_TIMINGS : [0.2, 0.1, 1],
-		SEED_YIELD : 0,
-		SEED_YIELD_AMT : 3
+		SEED_YIELD : 1,
+		SEED_YIELD_AMT : 1
 	}
 }
 

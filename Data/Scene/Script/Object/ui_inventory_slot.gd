@@ -1,7 +1,7 @@
 extends Panel
 
 # Readies the ItemDisplay, a Sprite2D which will hold the texture of an item.
-@onready var display: Sprite2D = $DisplayCenterContainer/DisplayPanel/ItemDisplay
+@onready var display : Sprite2D = $DisplayCenterContainer/DisplayPanel/ItemDisplay
 @onready var label : Label = $DisplayCenterContainer/DisplayPanel/ItemLabel
 
 '''Updates the ItemDisplay with a given InventorySlot.
@@ -20,6 +20,7 @@ func update(slot: InventorySlot):
 	else:
 		display.visible = true
 		display.texture = item.atlas_texture.atlas
+		display.region_rect = item.atlas_texture.region
 		update_amount(amt)
 			
 ''' Given an amount, update the item amount label.

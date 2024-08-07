@@ -127,3 +127,4 @@ func _on_area_2d_area_entered(area):
 func collect(item : InventoryItem):
 	# Calls inventory's insert item function
 	inv.insert_item(item)
+	inv.print_inventory()
