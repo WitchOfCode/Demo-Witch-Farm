@@ -122,3 +122,8 @@ func _on_area_2d_area_entered(area):
 	# Checks to make sure player is not in out of bounds Collision Box.
 	if area.is_in_group("outer_bounds"):
 		out_of_bounds = true
+		
+'''Insert an item into the players inventory.'''
+func collect(item : InventoryItem):
+	# Calls inventory's insert item function
+	inv.insert_item(item)

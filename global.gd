@@ -13,15 +13,15 @@ const SEED_NAME : String = "Name" # Name of the crop growth sprite.
 const SEED_STAGES : String = "Stages" # How many stages there are in this crop.
 const SEED_TIMINGS : String = "Timings" # Timings of when the crop goes into the next stage.
 const SEED_YIELD: String = "Yield" # The item ID used when a crop is harvested.
-const SEED_YIELD_AMT : String = "Yield_Amt"
+const SEED_YIELD_AMT : String = "Yield_Amt" # The amount of items yielded when harvested.
 
 # Nested Dictionary storing seed data based on ID.
 var dict_seed_data = {
 	0 : {
 		SEED_NAME : "grow_wheat",
 		SEED_STAGES : 3,
-		SEED_TIMINGS : [2.2, 2.1, 1],
-		SEED_YIELD : 1,
+		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_YIELD : 0,
 		SEED_YIELD_AMT : 3
 	}
 }
@@ -53,6 +53,12 @@ var dict_item_data = {
 
 # Strings when checking for tile validity.
 # Used to check if tile can be seeded.
-const IS_SEEDABLE_TILE = "seedable"
+const IS_SEEDABLE_TILE : String = "seedable"
 # Used to check if tile is seeded.
-const IS_SEEDED_TILE = "seeded"
+const IS_SEEDED_TILE : String = "seeded"
+
+# Path names
+const ITEM_RESOURCE_PATH : String = "res://Data/Items/Resources/"
+
+# File Extensions.
+const PREFIX_RESOURCE : String = ".tres"

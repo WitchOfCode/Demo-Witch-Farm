@@ -13,12 +13,12 @@ var scene_crop_16x64 : PackedScene
 # The name of the tile map node.
 @export var tile_map_name : String
 
-# The TileSet ID that is used when selecting a TileMap.
+# Tthe TileSet ID that is used when selecting a TileMap.
 var tile_set_id : int = 0
 @onready var pause_menu = $TestCamera/PauseMenu
 var paused: bool = false
-# New variable to hold the player instance
-var player
+# Nnew variable to hold the player instance
+@onready var player : CharacterBody2D = $PlayerCharacter
 
 '''Ready loads when the script first loads.'''
 func _ready():
@@ -26,11 +26,6 @@ func _ready():
 	scene_tile_map = get_node(tile_map_name)
 	# Initializes the crop plot scene to this scene.
 	scene_crop_16x64 = load("res://Data/Scene/Object/Environment/env_crop_16x64.tscn")
-	
-	# Instance and add the player to the scene
-	# player = load("res://Data/Scene/Object/Player_Character.tscn").instantiate()
-	# add_child(player)
-	# player.position = scene_tile_map.map_to_world(Vector2(2, 2))  # Adjust initial position
 	
 '''Process loads every couple of frames.'''
 func _process(_delta):
@@ -105,5 +100,15 @@ func create_crop_instance():
 	add_child(itm_instance)
 	# Set its variables.
 	itm_instance.global_position = scene_tile_map.map_to_local(record_tile_pos)
-	itm_instance.set_seed(0)
+	itm_instance.set_seed(0, player)
 	itm_instance.grow_seed()
+	# Connects the harvested crop signal to the destroy function.
+	itm_instance.harvested_crop.connect(destroy_crop_instance.bind(itm_instance))
+	
+'''Given the crop instance, revert the tile its on to a dirt tile and destroy the object.
+	Crop Instance: The crop instance to destroy.'''
+func destroy_crop_instance(crop_instance):
+	var crop_position = scene_tile_map.local_to_map(crop_instance.global_position)
+	scene_tile_map.set_cell(Global.layer_plot, record_tile_pos, 0, Vector2i(5, 3))
+	
+	crop_instance.queue_free()
