@@ -25,7 +25,7 @@ offset_bottom = 16.0
 layout_mode = 2
 
 [node name="ItemDisplay" type="Sprite2D" parent="DisplayCenterContainer/DisplayPanel"]
-region_enabled = true
+position = Vector2(8, 0)
 
 [node name="ItemLabel" type="Label" parent="DisplayCenterContainer/DisplayPanel"]
 layout_mode = 0

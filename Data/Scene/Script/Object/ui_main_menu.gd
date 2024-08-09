@@ -10,6 +10,5 @@ func _ready():
 func _process(_delta):
 	pass
 
-
-func _on_button_pressed():
+func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Data/Scene/Object/Environment/test_area.tscn")
