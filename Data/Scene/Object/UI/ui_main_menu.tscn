@@ -16,50 +16,21 @@ script = ExtResource("1_plor4")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-offset_left = 32.0
-offset_top = 64.0
-offset_right = 572.0
-offset_bottom = 201.0
+offset_left = 10.0
+offset_top = 83.0
+offset_right = 550.0
+offset_bottom = 360.0
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 100
 text = "Hexing Fun"
 horizontal_alignment = 1
 
-[node name="Credits" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 404.0
-offset_right = 585.0
-offset_bottom = 573.0
-texture_normal = ExtResource("2_r322p")
-texture_pressed = ExtResource("3_224uq")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="Credits"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.51
-anchor_top = 0.445
-anchor_right = 0.51
-anchor_bottom = 0.445
-offset_left = -255.4
-offset_top = -83.205
-offset_right = 244.6
-offset_bottom = 86.795
-theme_override_colors/font_color = Color(0.517342, 0.342588, 0.15488, 1)
-theme_override_colors/font_shadow_color = Color(0.255662, 0.142859, 0.0132931, 1)
-theme_override_font_sizes/font_size = 50
-text = "Credits"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Play" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 45.0
-offset_top = 226.0
-offset_right = 585.0
-offset_bottom = 395.0
+offset_left = 113.0
+offset_top = 275.0
+offset_right = 550.0
+offset_bottom = 435.0
 texture_normal = ExtResource("2_r322p")
 texture_pressed = ExtResource("3_224uq")
 ignore_texture_size = true
@@ -84,8 +55,36 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MenuSplash" type="Sprite2D" parent="."]
-position = Vector2(819, 320)
+position = Vector2(838, 329)
 scale = Vector2(0.644444, 0.644444)
 texture = ExtResource("4_oylp2")
+
+[node name="Credits" type="TextureButton" parent="."]
+offset_left = 113.0
+offset_top = 433.0
+offset_right = 550.0
+offset_bottom = 593.0
+texture_normal = ExtResource("2_r322p")
+texture_pressed = ExtResource("3_224uq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Credits"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51
+anchor_top = 0.445
+anchor_right = 0.51
+anchor_bottom = 0.445
+offset_left = -255.4
+offset_top = -83.205
+offset_right = 244.6
+offset_bottom = 86.795
+theme_override_colors/font_color = Color(0.517342, 0.342588, 0.15488, 1)
+theme_override_colors/font_shadow_color = Color(0.255662, 0.142859, 0.0132931, 1)
+theme_override_font_sizes/font_size = 50
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
