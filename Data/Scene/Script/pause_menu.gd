@@ -1,7 +1,7 @@
 extends Control
 
 @onready var main = $"../../../"
-
+#var save_path = "user"
 
 func _on_resume_pressed():
 	main.pauseMenu()
