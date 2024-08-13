@@ -25,6 +25,7 @@ var move_direction : Vector2 = Vector2.ZERO
 
 # Sprite node
 @onready var sprite = $AnimatedSprite2D
+@onready var inv_ui = $InventoryUI
 
 # Animation variables
 var direction : Vector2 = Vector2(0, 1)
@@ -35,7 +36,8 @@ var animation_speed : float = .1005
 
 # Load the sprite sheet
 func _ready():
-	pass
+	inv.select_by_index(0)
+	inv_ui.desc_box.update_by_slot(inv.inventory_current_item)
 
 func _process(_delta):
 	pass

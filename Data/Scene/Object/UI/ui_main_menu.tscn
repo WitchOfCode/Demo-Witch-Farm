@@ -60,6 +60,7 @@ scale = Vector2(0.644444, 0.644444)
 texture = ExtResource("4_oylp2")
 
 [node name="Credits" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 113.0
 offset_top = 433.0
 offset_right = 550.0
