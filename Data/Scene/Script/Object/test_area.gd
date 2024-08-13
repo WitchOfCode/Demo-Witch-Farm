@@ -41,9 +41,11 @@ func _input(_event):
 		update_positions()
 		# Seeds the tile after positions have been updated.
 		seed_tile()
+	#adds Ui input for pause screen
 	if Input.is_action_just_pressed("pause"):
 		pauseMenu()
 
+'''when called, calls up the pause menu'''
 func pauseMenu():
 	if paused:
 		pause_menu.hide()	
