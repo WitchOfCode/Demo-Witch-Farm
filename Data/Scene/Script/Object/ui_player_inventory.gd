@@ -4,6 +4,8 @@ extends Control
 @onready var inv: Inventory = preload("res://Data/Items/Resources/player_inventory.tres")
 # Gets the GridContainer's children (the slots to reference and use).
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
+# Gets the description slot.
+@onready var desc_box : NinePatchRect = $UiDescriptionSlot
 
 var is_open : bool = false
 
@@ -12,12 +14,23 @@ func _ready():
 	# Attach inventory signal to the update slots fucntion.
 	inv.update.connect(update_slots)
 	# Update the slots and close.
-	update_slots()
+	initialize_slots()
 	close()
 
+'''Ties each UI Inventory Slot by its Inventory Slot counterpart.'''
+func initialize_slots():
+	# Keeps a running index
+	var index = 0
+	# Iterates through each slot to tie a variable to.
+	for ui_slot in slots:
+		ui_slot.update_by_slot(inv.inventory_slots[index])
+		ui_slot.slot_clicked.connect(call_selected.bind(ui_slot.slot))
+		index += 1
+
+'''Update the ui_inventory_slots accordingly.'''
 func update_slots():
-	for i in range(min(inv.inventory_slots.size(), slots.size())):
-		slots[i].update(inv.inventory_slots[i])
+	for ui_slot in slots:
+		ui_slot.update()
 	
 '''When the user inputs soemthing, do the inputs done here.'''
 func _input(_event):
@@ -38,3 +51,8 @@ func open():
 func close():
 	visible = false
 	is_open = false
+
+'''Given a slot, call this inventorys select by slot function.'''
+func call_selected(slot: InventorySlot):
+	inv.select_by_slot(slot)
+	desc_box.update_by_slot(slot)

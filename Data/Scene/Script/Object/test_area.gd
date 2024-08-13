@@ -88,13 +88,35 @@ func seed_tile():
 	
 	# Checks tile validity. If tile is available, grow a seed.
 	if check_tile_validity(plot_tile_data, seed_tile_data):
-		# Sets the plot to a plot tile.
-		scene_tile_map.set_cell(Global.layer_plot, record_tile_pos, 0, Vector2i(13, 14))
-		# Instances a new crop
-		create_crop_instance()
+		# Selects the currently selected item in player's inventory.
+		var item_to_plant = remove_item_as_seed()
+		if item_to_plant != -1:
+			# Sets the plot to a plot tile.
+			scene_tile_map.set_cell(Global.layer_plot, record_tile_pos, 0, Vector2i(13, 14))
+			# Instances a new crop
+			create_crop_instance(item_to_plant)
+			
+'''Removes an item from the inventory after checking the currently selected slot and item are valid.
+	Returns an items plant ID, if it has one. Otherwise, it returns -1.'''
+func remove_item_as_seed() -> int:
+	# Gets current slot in player's inventory and ensures its valid.
+	var slot = player.inv.inventory_current_item
+	if slot:
+		# Gets item, checks if its valid.
+		var item = slot.slot_item
+		if item:
+			# Checks the item's plant ID.
+			var seed = Global.dict_item_data[item.item_id][Global.ITEM_PLANT]
+			if seed != null:
+				player.inv.remove_item_by_selected(1)
+				# Returns the plant ID.
+				return seed
+	# If neither slot or item/item plant are valid, return null.
+	return -1
 		
-'''Create a new crop instance.'''
-func create_crop_instance():
+'''Create a new crop instance.
+	Seed ID: The seed from dict_seed_data to use.'''
+func create_crop_instance(seed_id: int):
 	# Instantiate scene and set its variables.
 	var itm_instance = scene_crop_16x64.instantiate()
 	
@@ -102,7 +124,7 @@ func create_crop_instance():
 	add_child(itm_instance)
 	# Set its variables.
 	itm_instance.global_position = scene_tile_map.map_to_local(record_tile_pos)
-	itm_instance.set_seed(0, player)
+	itm_instance.set_seed(seed_id, player)
 	itm_instance.grow_seed()
 	# Connects the harvested crop signal to the destroy function.
 	itm_instance.harvested_crop.connect(destroy_crop_instance.bind(itm_instance))
