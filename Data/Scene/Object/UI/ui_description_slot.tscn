@@ -1,0 +1,142 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqaatdgn6k4kw"]
+
+[ext_resource type="Texture2D" uid="uid://b7afeixxb77y6" path="res://Resources/UI/inventory-background.png" id="1_w8jbf"]
+[ext_resource type="Script" path="res://Data/Scene/Script/Object/ui_description_slot.gd" id="2_0jftn"]
+[ext_resource type="Texture2D" uid="uid://d172sg04dr2sh" path="res://Resources/UI/inventory-slot.png" id="3_24dvn"]
+[ext_resource type="Texture2D" uid="uid://chhsq4qkssyxv" path="res://Resources/UI/inventory-desc.png" id="4_td16n"]
+[ext_resource type="Texture2D" uid="uid://cg8iitycl1ktr" path="res://Resources/UI/inventory-desc-item.png" id="5_xde8c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jct5y"]
+line_spacing = -15.0
+font_size = 64
+
+[node name="UiDescriptionSlot" type="NinePatchRect"]
+texture_filter = 1
+custom_minimum_size = Vector2(122, 31)
+offset_right = 122.0
+offset_bottom = 31.0
+texture = ExtResource("1_w8jbf")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+script = ExtResource("2_0jftn")
+
+[node name="DescriptionCenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 24.0
+offset_bottom = 19.0
+
+[node name="SlotSprite2D" type="Sprite2D" parent="DescriptionCenterContainer"]
+texture = ExtResource("3_24dvn")
+centered = false
+
+[node name="DisplaySprite2D" type="Sprite2D" parent="DescriptionCenterContainer"]
+centered = false
+region_enabled = true
+
+[node name="ItemNameLabel" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 19.0
+offset_right = 463.0
+offset_bottom = 188.0
+scale = Vector2(0.065, 0.065)
+text = "Wheat 
+Seeds"
+label_settings = SubResource("LabelSettings_jct5y")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ItemDescNinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 3.0
+offset_right = 79.0
+offset_bottom = 28.0
+texture = ExtResource("4_td16n")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="ItemDescLabel" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 35.0
+offset_top = 5.0
+offset_right = 681.0
+offset_bottom = 328.0
+scale = Vector2(0.065, 0.065)
+label_settings = SubResource("LabelSettings_jct5y")
+autowrap_mode = 3
+
+[node name="MarketLabel" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 90.0
+offset_top = 2.0
+offset_right = 505.0
+offset_bottom = 90.0
+scale = Vector2(0.05, 0.05)
+text = "Market Price:"
+label_settings = SubResource("LabelSettings_jct5y")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SellLabel" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 90.0
+offset_top = 16.0
+offset_right = 505.0
+offset_bottom = 104.0
+scale = Vector2(0.05, 0.05)
+text = "Sell Price:"
+label_settings = SubResource("LabelSettings_jct5y")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SellPatch" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 20.0
+offset_right = 112.0
+offset_bottom = 36.0
+texture = ExtResource("5_xde8c")
+
+[node name="MarketPatch" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 6.0
+offset_right = 112.0
+offset_bottom = 22.0
+texture = ExtResource("5_xde8c")
+
+[node name="ItemSellLabel" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 90.0
+offset_top = 22.0
+offset_right = 505.0
+offset_bottom = 110.0
+scale = Vector2(0.05, 0.05)
+label_settings = SubResource("LabelSettings_jct5y")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ItemMarketLabel" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 90.0
+offset_top = 8.0
+offset_right = 505.0
+offset_bottom = 96.0
+scale = Vector2(0.05, 0.05)
+label_settings = SubResource("LabelSettings_jct5y")
+horizontal_alignment = 1
+autowrap_mode = 3

@@ -1,79 +1,99 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=21 format=3 uid="uid://cfwc76fmg50jq"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=22 format=3 uid="uid://cfwc76fmg50jq"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Classes/inventory.gd" id="1_1j4ps"]
 [ext_resource type="Script" path="res://Data/Scene/Script/Classes/inventory_slot.gd" id="1_tht2g"]
+[ext_resource type="Resource" uid="uid://4rj3fh2wrrgy" path="res://Data/Items/Resources/item_seed_wheat.tres" id="2_skfxc"]
 
 [sub_resource type="Resource" id="Resource_na0lu"]
 script = ExtResource("1_tht2g")
-slot_amount = 0
+slot_item = ExtResource("2_skfxc")
+slot_amount = 3
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_pi2uv"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_d2m57"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_waruc"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_isryt"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_w88bv"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_307o0"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_de15x"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_bqajf"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_e4x2m"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_t1ko1"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_28exv"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_lgdor"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_xma63"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_pyn3r"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_88l8h"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_e43r6"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [sub_resource type="Resource" id="Resource_xyxta"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
+slot_selected = false
 
 [resource]
 script = ExtResource("1_1j4ps")

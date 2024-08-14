@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://qg2igjqadh02"]
+[gd_scene load_steps=5 format=3 uid="uid://qg2igjqadh02"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/ui_player_inventory.gd" id="1_1rw3v"]
+[ext_resource type="PackedScene" uid="uid://bqaatdgn6k4kw" path="res://Data/Scene/Object/UI/ui_description_slot.tscn" id="2_0ya37"]
 [ext_resource type="Texture2D" uid="uid://b7afeixxb77y6" path="res://Resources/UI/inventory-background.png" id="2_7ko4k"]
 [ext_resource type="PackedScene" uid="uid://bqqg1yr5lronj" path="res://Data/Scene/Object/UI/ui_inventory_slot.tscn" id="3_iys5i"]
 
@@ -16,11 +17,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1rw3v")
 
+[node name="UiDescriptionSlot" parent="." instance=ExtResource("2_0ya37")]
+layout_mode = 0
+
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 texture_filter = 1
 layout_mode = 0
+offset_top = 32.0
 offset_right = 122.0
-offset_bottom = 62.0
+offset_bottom = 94.0
 texture = ExtResource("2_7ko4k")
 patch_margin_left = 6
 patch_margin_top = 6

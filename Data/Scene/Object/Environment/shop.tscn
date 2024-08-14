@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl7pl62681b7f"]
+
+[ext_resource type="Script" path="res://Data/Scene/Object/Environment/shop.gd" id="1_8xwsa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1c7a"]
+size = Vector2(41, 24)
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8xwsa")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_u1c7a")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

@@ -1,12 +1,15 @@
 # Script which holds global variables/functions. Is autoloaded through Project/Autoload.
 extends Node
 
+# Global variable for checking if an object is currently being dragged.
+var is_mouse_dragging_obj : bool = false
+
 # Specifies the layer numbers when interacting with the tilemap.
-var layer_floor = 0
-var layer_plot = 1
-var layer_floorobj = 2
-var layer_wall = 3
-var layer_air = 4
+const layer_floor : int = 0
+const layer_plot : int = 1
+const layer_floorobj : int = 2
+const layer_wall : int = 3
+const layer_air : int = 4
 
 # Specifies the key names used for the dictionary of seed data.
 const SEED_NAME : String = "Name" # Name of the crop growth sprite.
@@ -32,6 +35,8 @@ const ITEM_NAME : String = "Name" # Name of the item sprite
 const ITEM_DESC : String = "Description"
 const ITEM_PRICE : String = "Price" # Price of the item, in-case its sold. If null, it's not supposed to be a sold item.
 const ITEM_SELL : String = "Sell" # How much an item sells for. If null, it's not supposed to be sellable.
+const ITEM_MAX : String = "Max Amount" # The max stack amount for an item.
+const ITEM_PLANT : String = "Plant" # What Seed ID this item plants.
 
 # Nested Dictionary storing item data based on ID.
 var dict_item_data = {
@@ -40,14 +45,18 @@ var dict_item_data = {
 		ITEM_NAME : "Wheat Seeds",
 		ITEM_DESC : "Seeds to grow some wheat!",
 		ITEM_PRICE : 2.25,
-		ITEM_SELL : null
+		ITEM_SELL : null,
+		ITEM_MAX : 20,
+		ITEM_PLANT: 0
 	},
 	1 : {
 		ITEM_IDENTIFIER : "item_wheat",
 		ITEM_NAME : "Wheat Stalks",
 		ITEM_DESC : "Stalks grown and harvested.",
-		ITEM_PRICE : 3.50,
-		ITEM_SELL : 3.25
+		ITEM_PRICE : 3.25,
+		ITEM_SELL : 3.50,
+		ITEM_MAX : 3,
+		ITEM_PLANT : null
 	}
 }
 

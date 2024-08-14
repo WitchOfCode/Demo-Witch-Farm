@@ -58,6 +58,10 @@ func load_resource() -> Resource:
 func is_grown() -> bool:
 	return true if current_stage == crop_data[Global.SEED_STAGES] else false
 
+'''Checks to see if the player character has enough room to collect the crop.'''
+func is_not_inventory_available() -> bool:
+	return owner_player.inv.is_inventory_full()
+
 '''Grows a seed recursively and updates by stage.'''
 func grow_seed():
 	# Updates the sprite and timer.
@@ -90,7 +94,7 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 '''Harvest the crop depending on the stage (when fully grown).'''
 func harvest_crop():
 	# Ensures the crop is fully grown and not manually frozen.
-	if is_grown() and not is_frozen:
+	if is_grown() and not (is_frozen):
 		# Then gives it to the player to collect.
 		owner_player.collect(item_resource)
 		# Emits a signal that this crop is harvested.

@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bet0rn6idk20d"]
+[gd_scene load_steps=7 format=3 uid="uid://bet0rn6idk20d"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/ui_main_menu.gd" id="1_plor4"]
+[ext_resource type="Texture2D" uid="uid://dx06xl23e0f66" path="res://Resources/UI/bg4.png" id="2_77b2m"]
+[ext_resource type="Texture2D" uid="uid://bqod0c2tjabm7" path="res://Resources/UI/wood plaque.png" id="2_r322p"]
+[ext_resource type="FontFile" uid="uid://d35c33ibudkpx" path="res://Resources/UI/Fruktur/Fruktur-Regular.ttf" id="3_4gc5w"]
+[ext_resource type="Texture2D" uid="uid://df5acq0sogcl3" path="res://Resources/UI/wood plaque pressed.png" id="3_224uq"]
+[ext_resource type="Texture2D" uid="uid://bg7hc1exc8rp5" path="res://Resources/UI/menu_splash.png" id="4_oylp2"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,24 +16,101 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_plor4")
 
-[node name="GridContainer" type="GridContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Bg" type="Sprite2D" parent="."]
+modulate = Color(0.955015, 0.821805, 0.845696, 1)
+position = Vector2(532, 346)
+texture = ExtResource("2_77b2m")
 
-[node name="Label" type="Label" parent="GridContainer"]
+[node name="Label" type="Label" parent="."]
 layout_mode = 2
+offset_left = -8.0
+offset_top = 36.0
+offset_right = 532.0
+offset_bottom = 236.0
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 100
-text = "WitchGame"
+theme_override_colors/font_color = Color(0.507316, 0.407773, 0.716852, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4gc5w")
+theme_override_font_sizes/font_size = 150
+text = "Hexing "
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="GridContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "Play"
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 118.0
+offset_right = 688.0
+offset_bottom = 395.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.219912, 0.199758, 0.447222, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4gc5w")
+theme_override_font_sizes/font_size = 150
+text = "Fun"
+horizontal_alignment = 1
 
-[connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]
+[node name="Play" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 111.0
+offset_top = 306.0
+offset_right = 548.0
+offset_bottom = 466.0
+texture_normal = ExtResource("2_r322p")
+texture_pressed = ExtResource("3_224uq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Play"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51
+anchor_top = 0.445
+anchor_right = 0.51
+anchor_bottom = 0.445
+offset_left = -255.4
+offset_top = -83.205
+offset_right = 244.6
+offset_bottom = 86.795
+theme_override_colors/font_color = Color(0.517342, 0.342588, 0.15488, 1)
+theme_override_colors/font_shadow_color = Color(0.255662, 0.142859, 0.0132931, 1)
+theme_override_font_sizes/font_size = 50
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuSplash" type="Sprite2D" parent="."]
+position = Vector2(838, 329)
+scale = Vector2(0.644444, 0.644444)
+texture = ExtResource("4_oylp2")
+
+[node name="Credits" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 466.0
+offset_right = 550.0
+offset_bottom = 626.0
+texture_normal = ExtResource("2_r322p")
+texture_pressed = ExtResource("3_224uq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Credits"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51
+anchor_top = 0.445
+anchor_right = 0.51
+anchor_bottom = 0.445
+offset_left = -255.4
+offset_top = -83.205
+offset_right = 244.6
+offset_bottom = 86.795
+theme_override_colors/font_color = Color(0.517342, 0.342588, 0.15488, 1)
+theme_override_colors/font_shadow_color = Color(0.255662, 0.142859, 0.0132931, 1)
+theme_override_font_sizes/font_size = 50
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
