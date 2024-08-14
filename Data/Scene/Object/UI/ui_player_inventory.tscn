@@ -23,8 +23,9 @@ layout_mode = 0
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 texture_filter = 1
 layout_mode = 0
+offset_top = 32.0
 offset_right = 122.0
-offset_bottom = 62.0
+offset_bottom = 94.0
 texture = ExtResource("2_7ko4k")
 patch_margin_left = 6
 patch_margin_top = 6
