@@ -66,6 +66,7 @@ patch_margin_bottom = 9
 
 [node name="ItemDescLabel" type="Label" parent="."]
 self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 35.0
 offset_top = 5.0
 offset_right = 681.0
@@ -76,6 +77,7 @@ autowrap_mode = 3
 
 [node name="MarketLabel" type="Label" parent="."]
 self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 90.0
 offset_top = 2.0
 offset_right = 505.0
@@ -88,6 +90,7 @@ autowrap_mode = 3
 
 [node name="SellLabel" type="Label" parent="."]
 self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 90.0
 offset_top = 16.0
 offset_right = 505.0
@@ -99,6 +102,7 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="SellPatch" type="NinePatchRect" parent="."]
+layout_mode = 0
 offset_left = 88.0
 offset_top = 20.0
 offset_right = 112.0
@@ -106,6 +110,7 @@ offset_bottom = 36.0
 texture = ExtResource("5_xde8c")
 
 [node name="MarketPatch" type="NinePatchRect" parent="."]
+layout_mode = 0
 offset_left = 88.0
 offset_top = 6.0
 offset_right = 112.0
@@ -114,6 +119,7 @@ texture = ExtResource("5_xde8c")
 
 [node name="ItemSellLabel" type="Label" parent="."]
 self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 90.0
 offset_top = 22.0
 offset_right = 505.0
@@ -125,6 +131,7 @@ autowrap_mode = 3
 
 [node name="ItemMarketLabel" type="Label" parent="."]
 self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 90.0
 offset_top = 8.0
 offset_right = 505.0
