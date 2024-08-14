@@ -211,19 +211,20 @@ zoom = Vector2(4, 4)
 
 [node name="PauseMenu" parent="Camera2D" instance=ExtResource("3_83kgt")]
 visible = false
+z_index = 2
 offset_left = 3.0
 offset_top = -6.0
 offset_right = 3.0
 offset_bottom = -6.0
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_xirt0")]
-y_sort_enabled = true
+z_index = 1
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -61.0
-offset_top = -112.0
-offset_right = 61.0
-offset_bottom = -50.0
+offset_left = -131.0
+offset_top = -51.0
+offset_right = -9.0
+offset_bottom = 11.0
 grow_horizontal = 1
 grow_vertical = 1
