@@ -22,7 +22,6 @@ position = Vector2(532, 346)
 texture = ExtResource("2_77b2m")
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 2
 offset_left = -8.0
 offset_top = 36.0
 offset_right = 532.0
@@ -51,7 +50,6 @@ text = "Fun"
 horizontal_alignment = 1
 
 [node name="Play" type="TextureButton" parent="."]
-layout_mode = 2
 offset_left = 111.0
 offset_top = 306.0
 offset_right = 548.0
@@ -85,7 +83,6 @@ scale = Vector2(0.644444, 0.644444)
 texture = ExtResource("4_oylp2")
 
 [node name="Credits" type="TextureButton" parent="."]
-layout_mode = 0
 offset_left = 113.0
 offset_top = 466.0
 offset_right = 550.0
@@ -112,5 +109,9 @@ theme_override_font_sizes/font_size = 50
 text = "Credits"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
