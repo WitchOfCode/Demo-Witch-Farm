@@ -35,7 +35,7 @@ offset_bottom = -20.2968
 theme_override_colors/font_color = Color(0.517647, 0.341176, 0.152941, 1)
 theme_override_colors/font_shadow_color = Color(0.254902, 0.141176, 0.0117647, 1)
 theme_override_font_sizes/font_size = 30
-text = "John Paul Espiritu"
+text = "Jhon Paul Espiritu"
 
 [node name="Label" type="Label" parent="ColorRect/WoodPlaque/Label"]
 layout_mode = 0
