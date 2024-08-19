@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bet0rn6idk20d"]
+[gd_scene load_steps=8 format=3 uid="uid://bet0rn6idk20d"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/ui_main_menu.gd" id="1_plor4"]
 [ext_resource type="Texture2D" uid="uid://dx06xl23e0f66" path="res://Resources/UI/bg4.png" id="2_77b2m"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://df5acq0sogcl3" path="res://Resources/UI/wood plaque pressed.png" id="3_224uq"]
 [ext_resource type="Texture2D" uid="uid://bg7hc1exc8rp5" path="res://Resources/UI/menu_splash.png" id="4_oylp2"]
 [ext_resource type="PackedScene" uid="uid://ce5y6pfg5y5m7" path="res://Data/Scene/Object/UI/Credits.tscn" id="7_pr88d"]
-[ext_resource type="Texture2D" uid="uid://dcyo6vmr81jh0" path="res://Resources/UI/back_button.png" id="8_yn8w5"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -22,11 +21,6 @@ script = ExtResource("1_plor4")
 modulate = Color(0.955015, 0.821805, 0.845696, 1)
 position = Vector2(532, 346)
 texture = ExtResource("2_77b2m")
-
-[node name="MenuSplash" type="Sprite2D" parent="."]
-position = Vector2(838, 329)
-scale = Vector2(0.644444, 0.644444)
-texture = ExtResource("4_oylp2")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -86,6 +80,11 @@ text = "Play"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="MenuSplash" type="Sprite2D" parent="."]
+position = Vector2(838, 329)
+scale = Vector2(0.644444, 0.644444)
+texture = ExtResource("4_oylp2")
+
 [node name="Credits" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 113.0
@@ -116,30 +115,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Credits_menu" parent="." instance=ExtResource("7_pr88d")]
-visible = false
-z_index = 30
 layout_mode = 1
 offset_top = 22.0
 offset_bottom = 22.0
 
-[node name="TextureButton" type="TextureButton" parent="Credits_menu"]
-layout_mode = 0
-offset_left = 203.0
-offset_top = 84.0
-offset_right = 361.0
-offset_bottom = 168.0
-rotation = 3.141
-texture_normal = ExtResource("2_r322p")
-texture_pressed = ExtResource("3_224uq")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="BackButton" type="Sprite2D" parent="Credits_menu/TextureButton"]
-position = Vector2(82.9773, 38.0495)
-rotation = -3.141
-scale = Vector2(0.367669, 0.445055)
-texture = ExtResource("8_yn8w5")
-
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Credits_menu/TextureButton" to="." method="_on_texture_button_pressed"]
