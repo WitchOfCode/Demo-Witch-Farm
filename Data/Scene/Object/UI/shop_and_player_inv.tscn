@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://balrvpp14b3yk"]
+
+[ext_resource type="Shader" path="res://Data/Scene/Script/Shaders/pause_menu.gdshader" id="1_gbmh1"]
+[ext_resource type="PackedScene" uid="uid://dks22x3tvronr" path="res://Data/Scene/Object/UI/ui_shop_inventory.tscn" id="1_umosa"]
+[ext_resource type="FontFile" uid="uid://d35c33ibudkpx" path="res://Resources/UI/Fruktur/Fruktur-Regular.ttf" id="2_aqesu"]
+[ext_resource type="PackedScene" uid="uid://qg2igjqadh02" path="res://Data/Scene/Object/UI/ui_player_inventory.tscn" id="3_axi3o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x6nsn"]
+shader = ExtResource("1_gbmh1")
+shader_parameter/amount = 1.121
+
+[node name="ShopAndPlayerInv" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_x6nsn")
+layout_mode = 0
+offset_left = -236.0
+offset_top = -120.0
+offset_right = 504.0
+offset_bottom = 291.0
+
+[node name="UIShopInventory" parent="." instance=ExtResource("1_umosa")]
+layout_mode = 1
+offset_left = 3.0
+offset_top = 23.0
+offset_right = -1027.0
+offset_bottom = -563.0
+
+[node name="Label" type="Label" parent="UIShopInventory"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = -23.0
+offset_right = 414.0
+offset_bottom = 192.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_aqesu")
+theme_override_font_sizes/font_size = 170
+text = "Shop"
+
+[node name="UIPlayerInventory" parent="." instance=ExtResource("3_axi3o")]
+layout_mode = 1
+offset_left = 133.0
+offset_top = 24.0
+offset_right = -897.0
+offset_bottom = -562.0
+
+[node name="Label" type="Label" parent="UIPlayerInventory"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = -23.0
+offset_right = 418.0
+offset_bottom = 192.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_aqesu")
+theme_override_font_sizes/font_size = 170
+text = "Your"

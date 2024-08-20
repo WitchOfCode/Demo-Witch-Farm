@@ -218,6 +218,7 @@ offset_right = -581.0
 offset_bottom = -310.0
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_xirt0")]
+visible = false
 z_index = 1
 anchors_preset = 0
 anchor_right = 0.0
