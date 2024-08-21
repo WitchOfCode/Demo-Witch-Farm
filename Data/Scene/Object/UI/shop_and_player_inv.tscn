@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://balrvpp14b3yk"]
+[gd_scene load_steps=7 format=3 uid="uid://balrvpp14b3yk"]
 
 [ext_resource type="Shader" path="res://Data/Scene/Script/Shaders/pause_menu.gdshader" id="1_gbmh1"]
 [ext_resource type="PackedScene" uid="uid://dks22x3tvronr" path="res://Data/Scene/Object/UI/ui_shop_inventory.tscn" id="1_umosa"]
+[ext_resource type="Script" path="res://Data/Scene/Object/UI/shop_and_player_inv.gd" id="1_x53fx"]
 [ext_resource type="FontFile" uid="uid://d35c33ibudkpx" path="res://Resources/UI/Fruktur/Fruktur-Regular.ttf" id="2_aqesu"]
 [ext_resource type="PackedScene" uid="uid://qg2igjqadh02" path="res://Data/Scene/Object/UI/ui_player_inventory.tscn" id="3_axi3o"]
 
@@ -16,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_x53fx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_x6nsn")

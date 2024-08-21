@@ -28,7 +28,7 @@ func initialize_slots():
 		index += 1
 
 '''Update the ui_inventory_slots accordingly.'''
-func update_slots():
+func update_slots(): 
 	for ui_slot in slots:
 		ui_slot.update()
 	
@@ -36,7 +36,7 @@ func update_slots():
 func _input(_event):
 	# If the player presses something from the Input Map, do this:
 	# Open the inventory (press Q)
-	if Input.is_action_just_pressed("Open Inventory"):
+	if Input.is_action_just_pressed("Open Inventory"): #TODO if shop is clicked the 
 		if is_open:
 			close()
 		else:
