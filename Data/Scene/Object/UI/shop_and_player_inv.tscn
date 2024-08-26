@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" path="res://Data/Scene/Script/Shaders/pause_menu.gdshader" id="1_gbmh1"]
 [ext_resource type="PackedScene" uid="uid://dks22x3tvronr" path="res://Data/Scene/Object/UI/ui_shop_inventory.tscn" id="1_umosa"]
-[ext_resource type="Script" path="res://Data/Scene/Object/UI/shop_and_player_inv.gd" id="1_x53fx"]
+[ext_resource type="Script" path="res://Data/Scene/Script/Object/shop_and_player_inv.gd" id="1_x53fx"]
 [ext_resource type="FontFile" uid="uid://d35c33ibudkpx" path="res://Resources/UI/Fruktur/Fruktur-Regular.ttf" id="2_aqesu"]
 [ext_resource type="PackedScene" uid="uid://qg2igjqadh02" path="res://Data/Scene/Object/UI/ui_player_inventory.tscn" id="3_axi3o"]
 

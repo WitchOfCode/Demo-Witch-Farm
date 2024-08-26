@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://cpqfb0bxbbhlk"]
+[gd_scene load_steps=29 format=3 uid="uid://cpqfb0bxbbhlk"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/Player_Character.gd" id="1_0feuv"]
 [ext_resource type="Texture2D" uid="uid://pgh6a0fgwkgi" path="res://Resources/Entity/Character_Sprite_Sheet.png" id="2_1suij"]
 [ext_resource type="Resource" uid="uid://cfwc76fmg50jq" path="res://Data/Items/Resources/player_inventory.tres" id="2_whtge"]
 [ext_resource type="PackedScene" uid="uid://trqjtf8lawp6" path="res://Data/Scene/Object/UI/pause_menu.tscn" id="3_83kgt"]
 [ext_resource type="PackedScene" uid="uid://qg2igjqadh02" path="res://Data/Scene/Object/UI/ui_player_inventory.tscn" id="4_xirt0"]
+[ext_resource type="PackedScene" uid="uid://balrvpp14b3yk" path="res://Data/Scene/Object/UI/shop_and_player_inv.tscn" id="5_ovfth"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6l0ko"]
 atlas = ExtResource("2_1suij")
@@ -229,3 +230,10 @@ offset_right = -9.0
 offset_bottom = 11.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="ShopAndPlayerInv" parent="." instance=ExtResource("5_ovfth")]
+visible = false
+offset_left = 447.0
+offset_top = 250.0
+offset_right = 447.0
+offset_bottom = 250.0

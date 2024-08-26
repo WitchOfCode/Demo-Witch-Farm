@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3fge42up014e"]
+[gd_scene load_steps=5 format=3 uid="uid://d3fge42up014e"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/test_area.gd" id="1_7yb4s"]
 [ext_resource type="TileSet" uid="uid://brefalgbgk4v" path="res://Data/Tileset/test_area.tres" id="2_m51fm"]
 [ext_resource type="PackedScene" uid="uid://cpqfb0bxbbhlk" path="res://Data/Scene/Object/Entity/Player_Character.tscn" id="3_sdjb7"]
+[ext_resource type="PackedScene" uid="uid://72b3536u6lwl" path="res://Data/Scene/Object/Entity/Sell_Button.tscn" id="4_kfed8"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -38,3 +39,6 @@ position = Vector2(135, 180)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterBound"]
 polygon = PackedVector2Array(-80, -80, 400, -80, 400, 400, -80, 400, -80, -80, -253, 91, -242, 534, 587, 532, 548, -194, -230, -196, -251, 88)
+
+[node name="Node2D" parent="." instance=ExtResource("4_kfed8")]
+position = Vector2(100, 156)
