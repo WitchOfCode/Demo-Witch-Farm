@@ -33,7 +33,7 @@ layer_4/tile_data = PackedInt32Array()
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_sdjb7")]
 z_index = 1
-position = Vector2(135, 180)
+position = Vector2(148, 179)
 
 [node name="OuterBound" type="StaticBody2D" parent="." groups=["outer_bounds"]]
 
@@ -41,4 +41,15 @@ position = Vector2(135, 180)
 polygon = PackedVector2Array(-80, -80, 400, -80, 400, 400, -80, 400, -80, -80, -253, 91, -242, 534, 587, 532, 548, -194, -230, -196, -251, 88)
 
 [node name="Node2D" parent="." instance=ExtResource("4_kfed8")]
+visible = false
 position = Vector2(100, 156)
+
+[node name="ShopButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+offset_left = 32.0
+offset_top = 128.0
+offset_right = 80.0
+offset_bottom = 160.0
+
+[connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]

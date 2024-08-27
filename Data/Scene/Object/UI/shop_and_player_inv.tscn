@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://balrvpp14b3yk"]
+[gd_scene load_steps=8 format=3 uid="uid://balrvpp14b3yk"]
 
 [ext_resource type="Shader" path="res://Data/Scene/Script/Shaders/pause_menu.gdshader" id="1_gbmh1"]
 [ext_resource type="PackedScene" uid="uid://dks22x3tvronr" path="res://Data/Scene/Object/UI/ui_shop_inventory.tscn" id="1_umosa"]
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/shop_and_player_inv.gd" id="1_x53fx"]
 [ext_resource type="FontFile" uid="uid://d35c33ibudkpx" path="res://Resources/UI/Fruktur/Fruktur-Regular.ttf" id="2_aqesu"]
 [ext_resource type="PackedScene" uid="uid://qg2igjqadh02" path="res://Data/Scene/Object/UI/ui_player_inventory.tscn" id="3_axi3o"]
+[ext_resource type="PackedScene" uid="uid://72b3536u6lwl" path="res://Data/Scene/Object/Entity/Sell_Button.tscn" id="6_3d7ef"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x6nsn"]
 shader = ExtResource("1_gbmh1")
@@ -22,10 +23,10 @@ script = ExtResource("1_x53fx")
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_x6nsn")
 layout_mode = 0
-offset_left = -236.0
-offset_top = -120.0
-offset_right = 504.0
-offset_bottom = 291.0
+offset_left = -235.0
+offset_top = -139.0
+offset_right = 505.0
+offset_bottom = 272.0
 
 [node name="UIShopInventory" parent="." instance=ExtResource("1_umosa")]
 layout_mode = 1
@@ -47,9 +48,9 @@ text = "Shop"
 
 [node name="UIPlayerInventory" parent="." instance=ExtResource("3_axi3o")]
 layout_mode = 1
-offset_left = 133.0
+offset_left = 144.0
 offset_top = 24.0
-offset_right = -897.0
+offset_right = -886.0
 offset_bottom = -562.0
 
 [node name="Label" type="Label" parent="UIPlayerInventory"]
@@ -62,3 +63,9 @@ scale = Vector2(0.1, 0.1)
 theme_override_fonts/font = ExtResource("2_aqesu")
 theme_override_font_sizes/font_size = 170
 text = "Your"
+
+[node name="Node2D" parent="." instance=ExtResource("6_3d7ef")]
+position = Vector2(65, 135)
+
+[node name="Node2D2" parent="." instance=ExtResource("6_3d7ef")]
+position = Vector2(205, 137)
