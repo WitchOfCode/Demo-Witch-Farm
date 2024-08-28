@@ -16,7 +16,8 @@ var scene_crop_16x64 : PackedScene
 # Tthe TileSet ID that is used when selecting a TileMap.
 var tile_set_id : int = 0
 @onready var pause_menu = $PlayerCharacter/Camera2D/PauseMenu
-@onready var shop_scene = $PlayerCharacter/ShopAndPlayerInv
+@onready var shop_scene = $PlayerCharacter/InventoryUI
+var shop_on: bool 
 var paused: bool = false
 # Nnew variable to hold the player instance
 @onready var player : CharacterBody2D = $PlayerCharacter
@@ -44,7 +45,13 @@ func _input(_event):
 		seed_tile()
 	#adds Ui input for pause screen
 	if Input.is_action_just_pressed("pause"):
-		pauseMenu()
+		print(shop_on)
+		if shop_on: #if press esc when shop is on closes shop scene
+			shop_scene.close()
+			shop_on = !shop_on
+		else: #calls pause menu
+			pauseMenu()
+	
 
 '''when called, calls up the pause menu'''
 func pauseMenu():
@@ -138,6 +145,8 @@ func destroy_crop_instance(crop_instance):
 	
 	crop_instance.queue_free()
 
-
+'''Opens shop interface'''
 func _on_shop_button_pressed():
-	shop_scene.show()
+	shop_scene.open_shop()
+	shop_on = true
+	

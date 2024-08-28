@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://qg2igjqadh02"]
+[gd_scene load_steps=8 format=3 uid="uid://qg2igjqadh02"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/ui_player_inventory.gd" id="1_1rw3v"]
 [ext_resource type="PackedScene" uid="uid://bqaatdgn6k4kw" path="res://Data/Scene/Object/UI/ui_description_slot.tscn" id="2_0ya37"]
 [ext_resource type="Texture2D" uid="uid://b7afeixxb77y6" path="res://Resources/UI/inventory-background.png" id="2_7ko4k"]
 [ext_resource type="PackedScene" uid="uid://bqqg1yr5lronj" path="res://Data/Scene/Object/UI/ui_inventory_slot.tscn" id="3_iys5i"]
+[ext_resource type="PackedScene" uid="uid://dks22x3tvronr" path="res://Data/Scene/Object/UI/ui_shop_inventory.tscn" id="5_tc31f"]
+[ext_resource type="PackedScene" uid="uid://72b3536u6lwl" path="res://Data/Scene/Object/Entity/Sell_Button.tscn" id="6_5d3ut"]
+[ext_resource type="FontFile" uid="uid://d35c33ibudkpx" path="res://Resources/UI/Fruktur/Fruktur-Regular.ttf" id="7_gu2lw"]
 
 [node name="UIPlayerInventory" type="Control"]
 custom_minimum_size = Vector2(122, 62)
@@ -100,3 +103,38 @@ layout_mode = 2
 
 [node name="InventoryUISlot18" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iys5i")]
 layout_mode = 2
+
+[node name="UIShopInventory" parent="." instance=ExtResource("5_tc31f")]
+visible = false
+layout_mode = 1
+offset_left = 138.0
+offset_right = 138.0
+offset_bottom = 0.0
+
+[node name="BuyButton" parent="UIShopInventory" instance=ExtResource("6_5d3ut")]
+position = Vector2(62, 115)
+
+[node name="SellButton" parent="UIShopInventory" instance=ExtResource("6_5d3ut")]
+position = Vector2(-77, 116)
+
+[node name="ShopLabel" type="Label" parent="UIShopInventory"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = -23.0
+offset_right = 419.0
+offset_bottom = 192.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("7_gu2lw")
+theme_override_font_sizes/font_size = 170
+text = "Shop"
+
+[node name="PlayerLabel" type="Label" parent="UIShopInventory"]
+layout_mode = 0
+offset_left = -97.0
+offset_top = -23.0
+offset_right = 278.0
+offset_bottom = 192.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("7_gu2lw")
+theme_override_font_sizes/font_size = 170
+text = "Your"

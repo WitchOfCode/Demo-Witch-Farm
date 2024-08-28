@@ -7,6 +7,8 @@ extends Control
 # Gets the description slot.
 @onready var desc_box : NinePatchRect = $UiDescriptionSlot
 
+@onready var shop_inv = $UIShopInventory
+
 var is_open : bool = false
 
 '''When the control is initialized, update slots and close the menu.'''
@@ -42,10 +44,17 @@ func _input(_event):
 		else:
 			open()
 	
-'''Opens the inventory by making the panel visible, and setting is_open to true.'''
+'''Opens the inventory by making the panel visible, and setting is_open to true. Turns off shop inventory.'''
 func open():
 	visible = true
 	is_open = true
+	shop_inv.close()
+
+'''Opens the inventory by making the panel visible, and setting is_open to true. Turns on shop inventory.'''
+func open_shop():
+	visible = true
+	is_open = true	
+	shop_inv.open()
 	
 '''Closes the inventory by making the panel invisible, and setting is_open to false.'''
 func close():
@@ -57,8 +66,3 @@ func call_selected(slot: InventorySlot):
 	inv.select_by_slot(slot)
 	desc_box.update_by_slot(slot)
 	
-func close_inventory():
-	if is_open:
-		close()
-	else:
-		open()
