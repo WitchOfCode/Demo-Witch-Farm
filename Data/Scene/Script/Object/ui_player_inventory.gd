@@ -11,7 +11,6 @@ extends Control
 
 var is_open : bool = false
 
-
 '''When the control is initialized, update slots and close the menu.'''
 func _ready():
 	# Attach inventory signal to the update slots fucntion.
@@ -54,7 +53,7 @@ func open():
 '''Opens the inventory by making the panel visible, and setting is_open to true. Turns on shop inventory.'''
 func open_shop():
 	visible = true
-	#is_open = true	#TODO: should we turn this off
+	is_open = true	#TODO: should we turn this off
 	shop_inv.open()
 	
 '''Closes the inventory by making the panel invisible, and setting is_open to false.'''

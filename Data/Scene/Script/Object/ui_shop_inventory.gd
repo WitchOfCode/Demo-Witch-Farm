@@ -57,9 +57,4 @@ func call_selected(slot: InventorySlot):
 	inv.select_by_slot(slot)
 	desc_box.update_by_slot(slot)
 
-#func close_inventory():
-	#if is_open:
-		#close()
-	#else:
-		#open()
 

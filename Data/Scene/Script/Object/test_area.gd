@@ -45,12 +45,7 @@ func _input(_event):
 		seed_tile()
 	#adds Ui input for pause screen
 	if Input.is_action_just_pressed("pause"):
-		print(shop_on)
-		if shop_on: #if press esc when shop is on closes shop scene
-			shop_scene.close()
-			shop_on = !shop_on
-		else: #calls pause menu
-			pauseMenu()
+		pauseMenu()
 	
 
 '''when called, calls up the pause menu'''
