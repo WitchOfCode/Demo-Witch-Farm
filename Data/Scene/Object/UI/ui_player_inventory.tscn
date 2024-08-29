@@ -192,6 +192,3 @@ offset_left = -3.0
 offset_top = 102.0
 offset_right = -125.0
 offset_bottom = 40.0
-
-[connection signal="pressed" from="UIShopInventory/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="UIShopInventory/Button" to="." method="_on_button_pressed"]

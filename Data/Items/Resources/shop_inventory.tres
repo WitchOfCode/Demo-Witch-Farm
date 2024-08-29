@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Inventory" load_steps=22 format=3 uid="uid://ihnuh488s701"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Classes/inventory_slot.gd" id="1_w23kt"]
-[ext_resource type="Resource" uid="uid://b00qfsnd4h4mm" path="res://Data/Items/Resources/item_seed_dark_wheat.tres" id="2_fvutf"]
+[ext_resource type="Resource" path="res://Data/Items/Resources/item_seed_dark_wheat.tres" id="2_fvutf"]
 [ext_resource type="Script" path="res://Data/Scene/Script/Classes/inventory.gd" id="2_u5bjk"]
 
 [sub_resource type="Resource" id="Resource_tm1jq"]

@@ -1,8 +1,13 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=22 format=3 uid="uid://cfwc76fmg50jq"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=27 format=3 uid="uid://cfwc76fmg50jq"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Classes/inventory.gd" id="1_1j4ps"]
 [ext_resource type="Script" path="res://Data/Scene/Script/Classes/inventory_slot.gd" id="1_tht2g"]
 [ext_resource type="Resource" uid="uid://4rj3fh2wrrgy" path="res://Data/Items/Resources/item_seed_wheat.tres" id="2_skfxc"]
+[ext_resource type="Resource" uid="uid://c5gp81samyush" path="res://Data/Items/Resources/item_seed_dark_wheat.tres" id="3_6ryha"]
+[ext_resource type="Resource" uid="uid://y8bc52iyht86" path="res://Data/Items/Resources/item_seed_radish.tres" id="4_ch3ug"]
+[ext_resource type="Resource" uid="uid://c5boreahvrijk" path="res://Data/Items/Resources/item_seed_beet.tres" id="5_d82pm"]
+[ext_resource type="Resource" uid="uid://b2wfsici4op52" path="res://Data/Items/Resources/item_seed_carrot.tres" id="6_xkioe"]
+[ext_resource type="Resource" uid="uid://byckbqwrmrowi" path="res://Data/Items/Resources/item_potato.tres" id="7_wrgtt"]
 
 [sub_resource type="Resource" id="Resource_na0lu"]
 script = ExtResource("1_tht2g")
@@ -12,27 +17,32 @@ slot_selected = false
 
 [sub_resource type="Resource" id="Resource_pi2uv"]
 script = ExtResource("1_tht2g")
-slot_amount = 0
+slot_item = ExtResource("3_6ryha")
+slot_amount = 3
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_d2m57"]
 script = ExtResource("1_tht2g")
-slot_amount = 0
+slot_item = ExtResource("4_ch3ug")
+slot_amount = 3
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_waruc"]
 script = ExtResource("1_tht2g")
-slot_amount = 0
+slot_item = ExtResource("5_d82pm")
+slot_amount = 3
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_isryt"]
 script = ExtResource("1_tht2g")
-slot_amount = 0
+slot_item = ExtResource("6_xkioe")
+slot_amount = 3
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_w88bv"]
 script = ExtResource("1_tht2g")
-slot_amount = 0
+slot_item = ExtResource("7_wrgtt")
+slot_amount = 3
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_307o0"]
