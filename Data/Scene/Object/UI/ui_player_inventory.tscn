@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://qg2igjqadh02"]
+[gd_scene load_steps=9 format=3 uid="uid://qg2igjqadh02"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/ui_player_inventory.gd" id="1_1rw3v"]
 [ext_resource type="PackedScene" uid="uid://bqaatdgn6k4kw" path="res://Data/Scene/Object/UI/ui_description_slot.tscn" id="2_0ya37"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dks22x3tvronr" path="res://Data/Scene/Object/UI/ui_shop_inventory.tscn" id="5_tc31f"]
 [ext_resource type="Texture2D" uid="uid://iqhwke3xndg1" path="res://Resources/UI/coinbutton.png" id="6_8xw21"]
 [ext_resource type="FontFile" uid="uid://d35c33ibudkpx" path="res://Resources/UI/Fruktur/Fruktur-Regular.ttf" id="7_gu2lw"]
+[ext_resource type="PackedScene" uid="uid://dphi47odpx8cq" path="res://Data/Scene/Object/UI/coin_count.tscn" id="8_f83ng"]
 
 [node name="UIPlayerInventory" type="Control"]
 custom_minimum_size = Vector2(122, 62)
@@ -112,6 +113,7 @@ offset_bottom = 0.0
 
 [node name="Button2" type="Button" parent="UIShopInventory"]
 texture_filter = 1
+layout_mode = 0
 offset_left = -98.0
 offset_top = 104.0
 offset_right = -54.0
@@ -125,6 +127,7 @@ texture = ExtResource("6_8xw21")
 
 [node name="Label" type="Label" parent="UIShopInventory/Button2"]
 modulate = Color(0.85098, 0.627451, 0.4, 1)
+layout_mode = 0
 offset_left = 6.0
 offset_top = 3.0
 offset_right = 320.0
@@ -149,6 +152,7 @@ texture = ExtResource("6_8xw21")
 
 [node name="Label" type="Label" parent="UIShopInventory/Button"]
 modulate = Color(0.85098, 0.627451, 0.4, 1)
+layout_mode = 0
 offset_left = 6.0
 offset_top = 3.0
 offset_right = 320.0
@@ -181,3 +185,10 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_gu2lw")
 theme_override_font_sizes/font_size = 170
 text = "Your"
+
+[node name="CoinCount" parent="." instance=ExtResource("8_f83ng")]
+layout_mode = 1
+offset_left = -3.0
+offset_top = 102.0
+offset_right = -125.0
+offset_bottom = 40.0

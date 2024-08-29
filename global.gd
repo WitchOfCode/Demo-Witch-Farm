@@ -71,3 +71,5 @@ const ITEM_RESOURCE_PATH : String = "res://Data/Items/Resources/"
 
 # File Extensions.
 const PREFIX_RESOURCE : String = ".tres"
+
+var score: int = 0
