@@ -1,9 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://cpqfb0bxbbhlk"]
+[gd_scene load_steps=29 format=3 uid="uid://cpqfb0bxbbhlk"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/Player_Character.gd" id="1_0feuv"]
 [ext_resource type="Texture2D" uid="uid://pgh6a0fgwkgi" path="res://Resources/Entity/Character_Sprite_Sheet.png" id="2_1suij"]
 [ext_resource type="Resource" uid="uid://cfwc76fmg50jq" path="res://Data/Items/Resources/player_inventory.tres" id="2_whtge"]
 [ext_resource type="PackedScene" uid="uid://trqjtf8lawp6" path="res://Data/Scene/Object/UI/pause_menu.tscn" id="3_83kgt"]
+[ext_resource type="Resource" uid="uid://ihnuh488s701" path="res://Data/Items/Resources/shop_inventory.tres" id="3_vekyf"]
 [ext_resource type="PackedScene" uid="uid://qg2igjqadh02" path="res://Data/Scene/Object/UI/ui_player_inventory.tscn" id="4_xirt0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6l0ko"]
@@ -195,6 +196,7 @@ size = Vector2(9, 4)
 [node name="PlayerCharacter" type="CharacterBody2D"]
 script = ExtResource("1_0feuv")
 inv = ExtResource("2_whtge")
+shop = ExtResource("3_vekyf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -211,19 +213,20 @@ zoom = Vector2(4, 4)
 
 [node name="PauseMenu" parent="Camera2D" instance=ExtResource("3_83kgt")]
 visible = false
-offset_left = 3.0
-offset_top = -6.0
-offset_right = 3.0
-offset_bottom = -6.0
+z_index = 2
+offset_left = -581.0
+offset_top = -310.0
+offset_right = -581.0
+offset_bottom = -310.0
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_xirt0")]
-y_sort_enabled = true
+z_index = 1
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -61.0
-offset_top = -112.0
-offset_right = 61.0
-offset_bottom = -50.0
+offset_left = -130.0
+offset_top = -51.0
+offset_right = -8.0
+offset_bottom = 11.0
 grow_horizontal = 1
 grow_vertical = 1

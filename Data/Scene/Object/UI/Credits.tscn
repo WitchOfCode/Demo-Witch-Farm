@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce5y6pfg5y5m7"]
+
+[ext_resource type="Texture2D" uid="uid://bqod0c2tjabm7" path="res://Resources/UI/wood plaque.png" id="1_2hhph"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -79.0
+offset_top = -160.0
+offset_right = 1231.0
+offset_bottom = 793.0
+color = Color(0.141176, 0.141176, 0.141176, 0.227451)
+
+[node name="WoodPlaque" type="Sprite2D" parent="ColorRect"]
+position = Vector2(653, 478)
+scale = Vector2(1.18692, 1.8759)
+texture = ExtResource("1_2hhph")
+
+[node name="Label" type="Label" parent="ColorRect/WoodPlaque"]
+offset_left = -299.986
+offset_top = -69.2968
+offset_right = -2.98557
+offset_bottom = -20.2968
+theme_override_colors/font_color = Color(0.517647, 0.341176, 0.152941, 1)
+theme_override_colors/font_shadow_color = Color(0.254902, 0.141176, 0.0117647, 1)
+theme_override_font_sizes/font_size = 30
+text = "Jhon Paul Espiritu"
+
+[node name="Label" type="Label" parent="ColorRect/WoodPlaque/Label"]
+layout_mode = 0
+offset_left = 292.391
+offset_top = 46.0396
+offset_right = 677.391
+offset_bottom = 95.0396
+theme_override_colors/font_color = Color(0.517647, 0.341176, 0.152941, 1)
+theme_override_colors/font_shadow_color = Color(0.254902, 0.141176, 0.0117647, 1)
+theme_override_font_sizes/font_size = 30
+text = "Mago/ Apollo Cappetta"
+
+[node name="Label2" type="Label" parent="ColorRect/WoodPlaque/Label"]
+layout_mode = 0
+offset_left = 347.072
+offset_top = 2.84782
+offset_right = 570.072
+offset_bottom = 44.8478
+theme_override_colors/font_color = Color(0.517647, 0.341176, 0.152941, 1)
+theme_override_colors/font_shadow_color = Color(0.254902, 0.141176, 0.0117647, 1)
+theme_override_font_sizes/font_size = 30
+text = "Morgan Phillips"
+
+[node name="Label3" type="Label" parent="ColorRect/WoodPlaque/Label"]
+layout_mode = 0
+offset_left = 40.2512
+offset_top = 41.2933
+offset_right = 195.251
+offset_bottom = 90.2933
+theme_override_colors/font_color = Color(0.517647, 0.341176, 0.152941, 1)
+theme_override_colors/font_shadow_color = Color(0.254902, 0.141176, 0.0117647, 1)
+theme_override_font_sizes/font_size = 30
+text = "Lan Kung"

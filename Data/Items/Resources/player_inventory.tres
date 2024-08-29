@@ -10,57 +10,57 @@ slot_item = ExtResource("2_skfxc")
 slot_amount = 3
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_pi2uv"]
+[sub_resource type="Resource" id="Resource_3sgn7"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_d2m57"]
+[sub_resource type="Resource" id="Resource_groyd"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_waruc"]
+[sub_resource type="Resource" id="Resource_5r8hf"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_isryt"]
+[sub_resource type="Resource" id="Resource_yrhxy"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_w88bv"]
+[sub_resource type="Resource" id="Resource_howbm"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_307o0"]
+[sub_resource type="Resource" id="Resource_tbtva"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_de15x"]
+[sub_resource type="Resource" id="Resource_8xvb3"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_bqajf"]
+[sub_resource type="Resource" id="Resource_so0vh"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_e4x2m"]
+[sub_resource type="Resource" id="Resource_xo0fy"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_t1ko1"]
+[sub_resource type="Resource" id="Resource_rad1d"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
 
-[sub_resource type="Resource" id="Resource_28exv"]
+[sub_resource type="Resource" id="Resource_oi5sp"]
 script = ExtResource("1_tht2g")
 slot_amount = 0
 slot_selected = false
@@ -97,4 +97,4 @@ slot_selected = false
 
 [resource]
 script = ExtResource("1_1j4ps")
-inventory_slots = Array[ExtResource("1_tht2g")]([SubResource("Resource_na0lu"), SubResource("Resource_pi2uv"), SubResource("Resource_d2m57"), SubResource("Resource_waruc"), SubResource("Resource_isryt"), SubResource("Resource_w88bv"), SubResource("Resource_307o0"), SubResource("Resource_de15x"), SubResource("Resource_bqajf"), SubResource("Resource_e4x2m"), SubResource("Resource_t1ko1"), SubResource("Resource_28exv"), SubResource("Resource_lgdor"), SubResource("Resource_xma63"), SubResource("Resource_pyn3r"), SubResource("Resource_88l8h"), SubResource("Resource_e43r6"), SubResource("Resource_xyxta")])
+inventory_slots = Array[ExtResource("1_tht2g")]([SubResource("Resource_na0lu"), SubResource("Resource_3sgn7"), SubResource("Resource_groyd"), SubResource("Resource_5r8hf"), SubResource("Resource_yrhxy"), SubResource("Resource_howbm"), SubResource("Resource_tbtva"), SubResource("Resource_8xvb3"), SubResource("Resource_so0vh"), SubResource("Resource_xo0fy"), SubResource("Resource_rad1d"), SubResource("Resource_oi5sp"), SubResource("Resource_lgdor"), SubResource("Resource_xma63"), SubResource("Resource_pyn3r"), SubResource("Resource_88l8h"), SubResource("Resource_e43r6"), SubResource("Resource_xyxta")])

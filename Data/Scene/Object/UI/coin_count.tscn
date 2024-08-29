@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://dphi47odpx8cq"]
+
+[ext_resource type="Script" path="res://Data/Scene/Script/coin_count.gd" id="1_ohmmw"]
+[ext_resource type="Texture2D" uid="uid://iqhwke3xndg1" path="res://Resources/UI/coinbutton.png" id="1_vpxcr"]
+
+[node name="CoinCount" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = -963.0
+offset_bottom = -583.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_ohmmw")
+
+[node name="Coinbutton" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(18.5, 23.5)
+scale = Vector2(1.1875, 1.1875)
+texture = ExtResource("1_vpxcr")
+
+[node name="Label" type="Label" parent="Coinbutton"]
+modulate = Color(0.314279, 0.219196, 0.123214, 1)
+offset_left = 9.68421
+offset_top = -8.0
+offset_right = 45.6842
+offset_bottom = 129.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 100
+text = ":"
+
+[node name="Label2" type="Label" parent="Coinbutton"]
+modulate = Color(0.314279, 0.219196, 0.123214, 1)
+offset_left = 12.7953
+offset_top = -7.55556
+offset_right = 327.795
+offset_bottom = 143.444
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 110
+text = "00000"

@@ -64,7 +64,7 @@ func is_inventory_full():
 '''Removes an item by the currently selected item.
 	Amount: Item amount to remove.'''
 func remove_item_by_selected(amount: int):
-	inventory_current_item.slot_amount -= 1
+	inventory_current_item.slot_amount -= amount
 	# If the slot amount is zero, remove the item entirely.
 	if (inventory_current_item.slot_amount == 0):
 		delete_item(inventory_current_item)
