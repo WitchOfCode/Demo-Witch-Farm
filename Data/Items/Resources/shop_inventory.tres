@@ -1,37 +1,47 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=22 format=3 uid="uid://ihnuh488s701"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=27 format=3 uid="uid://ihnuh488s701"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Classes/inventory_slot.gd" id="1_w23kt"]
-[ext_resource type="Resource" path="res://Data/Items/Resources/item_seed_dark_wheat.tres" id="2_fvutf"]
+[ext_resource type="Resource" uid="uid://4rj3fh2wrrgy" path="res://Data/Items/Resources/item_seed_wheat.tres" id="2_b3dt7"]
+[ext_resource type="Resource" uid="uid://c5gp81samyush" path="res://Data/Items/Resources/item_seed_dark_wheat.tres" id="2_fvutf"]
 [ext_resource type="Script" path="res://Data/Scene/Script/Classes/inventory.gd" id="2_u5bjk"]
+[ext_resource type="Resource" uid="uid://y8bc52iyht86" path="res://Data/Items/Resources/item_seed_radish.tres" id="3_d544e"]
+[ext_resource type="Resource" uid="uid://c5boreahvrijk" path="res://Data/Items/Resources/item_seed_beet.tres" id="3_eswmc"]
+[ext_resource type="Resource" uid="uid://b2wfsici4op52" path="res://Data/Items/Resources/item_seed_carrot.tres" id="4_ixrmu"]
+[ext_resource type="Resource" uid="uid://byckbqwrmrowi" path="res://Data/Items/Resources/item_potato.tres" id="5_4kic2"]
 
 [sub_resource type="Resource" id="Resource_tm1jq"]
 script = ExtResource("1_w23kt")
-slot_item = ExtResource("2_fvutf")
-slot_amount = 3
+slot_item = ExtResource("2_b3dt7")
+slot_amount = 0
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_fbuhx"]
 script = ExtResource("1_w23kt")
+slot_item = ExtResource("3_d544e")
 slot_amount = 0
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_4jcc1"]
 script = ExtResource("1_w23kt")
+slot_item = ExtResource("4_ixrmu")
 slot_amount = 0
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_urhxl"]
 script = ExtResource("1_w23kt")
+slot_item = ExtResource("5_4kic2")
 slot_amount = 0
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_nre6b"]
 script = ExtResource("1_w23kt")
+slot_item = ExtResource("2_fvutf")
 slot_amount = 0
 slot_selected = false
 
 [sub_resource type="Resource" id="Resource_wyf6e"]
 script = ExtResource("1_w23kt")
+slot_item = ExtResource("3_eswmc")
 slot_amount = 0
 slot_selected = false
 

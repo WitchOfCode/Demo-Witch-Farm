@@ -53,9 +53,9 @@ var dict_seed_data = {
 	},
 	5 : {SEED_NAME : "grow_potato",
 		SEED_STAGES : 3,
-		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_TIMINGS : [5, 3, 1],
 		SEED_YIELD : 10,
-		SEED_YIELD_AMT : 1
+		SEED_YIELD_AMT : 3
 	}
 }
 
@@ -154,9 +154,9 @@ var dict_item_data = {
 		ITEM_PLANT : null
 	},
 	10 : {ITEM_IDENTIFIER : "item_potato",
-		ITEM_NAME : "Carrot",
+		ITEM_NAME : "Potato",
 		ITEM_DESC : "Potatos perfect for any dish.",
-		ITEM_PRICE : 5.25,
+		ITEM_PRICE : 16.25,
 		ITEM_SELL : 6.50,
 		ITEM_MAX : 20,
 		ITEM_PLANT : 5

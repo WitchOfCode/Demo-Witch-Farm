@@ -95,8 +95,11 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 func harvest_crop():
 	# Ensures the crop is fully grown and not manually frozen.
 	if is_grown() and not (is_frozen):
+		var harvest_yield = crop_data[Global.SEED_YIELD_AMT]
+		
 		# Then gives it to the player to collect.
-		owner_player.collect(item_resource)
+		for i in range(harvest_yield):
+			owner_player.collect(item_resource)
 		# Emits a signal that this crop is harvested.
 		harvested_crop.emit()
 		

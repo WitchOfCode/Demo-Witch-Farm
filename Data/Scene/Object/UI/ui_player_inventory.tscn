@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://qg2igjqadh02"]
+[gd_scene load_steps=12 format=3 uid="uid://qg2igjqadh02"]
 
 [ext_resource type="Script" path="res://Data/Scene/Script/Object/ui_player_inventory.gd" id="1_1rw3v"]
 [ext_resource type="PackedScene" uid="uid://bqaatdgn6k4kw" path="res://Data/Scene/Object/UI/ui_description_slot.tscn" id="2_0ya37"]
@@ -8,6 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://iqhwke3xndg1" path="res://Resources/UI/coinbutton.png" id="6_8xw21"]
 [ext_resource type="FontFile" uid="uid://d35c33ibudkpx" path="res://Resources/UI/Fruktur/Fruktur-Regular.ttf" id="7_gu2lw"]
 [ext_resource type="PackedScene" uid="uid://dphi47odpx8cq" path="res://Data/Scene/Object/UI/coin_count.tscn" id="8_f83ng"]
+[ext_resource type="Texture2D" uid="uid://chhsq4qkssyxv" path="res://Resources/UI/inventory-desc.png" id="9_c3x8c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y2aex"]
+line_spacing = -15.0
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_kbp3o"]
+font_size = 90
 
 [node name="UIPlayerInventory" type="Control"]
 custom_minimum_size = Vector2(122, 62)
@@ -192,3 +200,81 @@ offset_left = -3.0
 offset_top = 102.0
 offset_right = -125.0
 offset_bottom = 40.0
+
+[node name="ErrorPatch" type="NinePatchRect" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 69.0
+offset_top = 17.0
+offset_right = 191.0
+offset_bottom = 79.0
+texture = ExtResource("2_7ko4k")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="ErrorTitle" type="Label" parent="ErrorPatch"]
+modulate = Color(0.314279, 0.219196, 0.123214, 1)
+layout_mode = 0
+offset_left = 38.0
+offset_top = 1.0
+offset_right = 521.0
+offset_bottom = 216.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_gu2lw")
+theme_override_font_sizes/font_size = 170
+text = "Error!"
+
+[node name="ErrorPatchRect" type="NinePatchRect" parent="ErrorPatch"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 21.0
+offset_right = 118.0
+offset_bottom = 49.0
+texture = ExtResource("9_c3x8c")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="ErrorLabel" type="Label" parent="ErrorPatch"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 23.0
+offset_right = 1698.0
+offset_bottom = 392.0
+scale = Vector2(0.065, 0.065)
+label_settings = SubResource("LabelSettings_y2aex")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ErrorButton" type="Button" parent="ErrorPatch"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 49.0
+offset_top = 51.0
+offset_right = 73.0
+offset_bottom = 60.0
+
+[node name="Label" type="Label" parent="ErrorPatch/ErrorButton"]
+modulate = Color(0.91992, 0.736398, 0.556713, 1)
+layout_mode = 0
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 310.0
+offset_bottom = 135.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 100
+text = "Exit
+"
+label_settings = SubResource("LabelSettings_kbp3o")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="UIShopInventory/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="UIShopInventory/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ErrorPatch/ErrorButton" to="." method="hide_error_box"]
