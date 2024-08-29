@@ -23,31 +23,31 @@ var dict_seed_data = {
 	0 : {
 		SEED_NAME : "grow_wheat",
 		SEED_STAGES : 3,
-		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_TIMINGS : [1.5, 1.5, 1],
 		SEED_YIELD : 1,
 		SEED_YIELD_AMT : 1
 	},
 	1 : {SEED_NAME : "grow_dark_wheat",
 		SEED_STAGES : 3,
-		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_TIMINGS : [1.5, 1.5, 1],
 		SEED_YIELD : 3,
 		SEED_YIELD_AMT : 1
 	},
 	2 : {SEED_NAME : "grow_radish",
 		SEED_STAGES : 3,
-		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_TIMINGS : [1.5, 1.5, 1],
 		SEED_YIELD : 5,
 		SEED_YIELD_AMT : 1
 	},
 	3 : {SEED_NAME : "grow_beet",
 		SEED_STAGES : 3,
-		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_TIMINGS : [1.5, 1.5, 1],
 		SEED_YIELD : 7,
 		SEED_YIELD_AMT : 1
 	},
 	4 : {SEED_NAME : "grow_carrot",
 		SEED_STAGES : 3,
-		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_TIMINGS : [1.5, 1.5, 1],
 		SEED_YIELD : 9,
 		SEED_YIELD_AMT : 1
 	},
