@@ -57,6 +57,15 @@ var dict_item_data = {
 		ITEM_SELL : 3.50,
 		ITEM_MAX : 3,
 		ITEM_PLANT : null
+	},
+	2 : {
+		ITEM_IDENTIFIER : "item_seed_dark_wheat",
+		ITEM_NAME : "Dark Wheat Seeds",
+		ITEM_DESC : "Magic versions of wheat that grow extremely quickly.",
+		ITEM_PRICE : 2.25,
+		ITEM_SELL : null,
+		ITEM_MAX : 20,
+		ITEM_PLANT : null
 	}
 }
 
@@ -72,4 +81,4 @@ const ITEM_RESOURCE_PATH : String = "res://Data/Items/Resources/"
 # File Extensions.
 const PREFIX_RESOURCE : String = ".tres"
 
-var score: int = 0
+var score: float = 0

@@ -65,4 +65,14 @@ func close():
 func call_selected(slot: InventorySlot):
 	inv.select_by_slot(slot)
 	desc_box.update_by_slot(slot)
-	
+
+func _on_button_2_pressed():
+	if inv.inventory_current_item.slot_amount > 0:
+		var item_id = inv.inventory_current_item.slot_item.item_id
+		Global.score += Global.dict_item_data[item_id][Global.ITEM_SELL]
+		print(Global.score)
+		inv.remove_item_by_selected(1)
+
+
+func _on_button_pressed():
+	pass # Replace with function body.

@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var speed : float = 6
 # Player's inventory.
 @export var inv : Inventory
+# Shop's inventory
+@export var shop : Inventory
 
 # Flag for checking if player going out of bounds
 var out_of_bounds : bool = false
