@@ -26,6 +26,36 @@ var dict_seed_data = {
 		SEED_TIMINGS : [0.2, 0.1, 1],
 		SEED_YIELD : 1,
 		SEED_YIELD_AMT : 1
+	},
+	1 : {SEED_NAME : "grow_dark_wheat",
+		SEED_STAGES : 3,
+		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_YIELD : 3,
+		SEED_YIELD_AMT : 1
+	},
+	2 : {SEED_NAME : "grow_radish",
+		SEED_STAGES : 3,
+		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_YIELD : 5,
+		SEED_YIELD_AMT : 1
+	},
+	3 : {SEED_NAME : "grow_beet",
+		SEED_STAGES : 3,
+		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_YIELD : 7,
+		SEED_YIELD_AMT : 1
+	},
+	4 : {SEED_NAME : "grow_carrot",
+		SEED_STAGES : 3,
+		SEED_TIMINGS : [0.2, 0.1, 1],
+		SEED_YIELD : 9,
+		SEED_YIELD_AMT : 1
+	},
+	5 : {SEED_NAME : "grow_potato",
+		SEED_STAGES : 3,
+		SEED_TIMINGS : [5, 3, 1],
+		SEED_YIELD : 10,
+		SEED_YIELD_AMT : 3
 	}
 }
 
@@ -57,6 +87,79 @@ var dict_item_data = {
 		ITEM_SELL : 3.50,
 		ITEM_MAX : 3,
 		ITEM_PLANT : null
+	},
+	2 : {
+		ITEM_IDENTIFIER : "item_seed_dark_wheat",
+		ITEM_NAME : "Dark Wheat Seeds",
+		ITEM_DESC : "Magic versions of wheat that grow extremely quickly.",
+		ITEM_PRICE : 3.25,
+		ITEM_SELL : null,
+		ITEM_MAX : 20,
+		ITEM_PLANT : 1
+	},
+	3 : {ITEM_IDENTIFIER : "item_dark_wheat",
+		ITEM_NAME : "Dark Wheat",
+		ITEM_DESC : "Stalks grown and harvested. It is exuding dark energy.",
+		ITEM_PRICE : 4.25,
+		ITEM_SELL : 4.50,
+		ITEM_MAX : 20,
+		ITEM_PLANT : null
+	},
+	4 : {ITEM_IDENTIFIER : "item_seed_radish",
+		ITEM_NAME : "Radish Seeds",
+		ITEM_DESC : "Seeds for radishes.",
+		ITEM_PRICE : 1.25,
+		ITEM_SELL : null,
+		ITEM_MAX : 20,
+		ITEM_PLANT : 2
+	},
+	5 : {ITEM_IDENTIFIER : "item_radish",
+		ITEM_NAME : "Radish",
+		ITEM_DESC : "Fully matured radishes ready to be harvested.",
+		ITEM_PRICE : 2.25,
+		ITEM_SELL : 2.50,
+		ITEM_MAX : 20,
+		ITEM_PLANT : null
+	},
+	6 : {ITEM_IDENTIFIER : "item_seed_beet",
+		ITEM_NAME : "Beet Seeds",
+		ITEM_DESC : "Seeds for beets.",
+		ITEM_PRICE : 4.25,
+		ITEM_SELL : null,
+		ITEM_MAX : 20,
+		ITEM_PLANT : 3
+	},
+	7 : {ITEM_IDENTIFIER : "item_beet",
+		ITEM_NAME : "Beet",
+		ITEM_DESC : "Perfectly ruby red beet ready for consumption.",
+		ITEM_PRICE : 5.25,
+		ITEM_SELL : 5.50,
+		ITEM_MAX : 20,
+		ITEM_PLANT : null
+	},
+	8 : {ITEM_IDENTIFIER : "item_seed_carrot",
+		ITEM_NAME : "Carrot Seed",
+		ITEM_DESC : "Seed for carrot.",
+		ITEM_PRICE : 5.25,
+		ITEM_SELL : null,
+		ITEM_MAX : 20,
+		ITEM_PLANT : 4
+	}, 
+	9 : {ITEM_IDENTIFIER : "item_carrot",
+		ITEM_NAME : "Carrot",
+		ITEM_DESC : "Fully grown carrot with extra health benefits.",
+		ITEM_PRICE : 6.25,
+		ITEM_SELL : 6.50,
+		ITEM_MAX : 20,
+		ITEM_PLANT : null
+	},
+	10 : {ITEM_IDENTIFIER : "item_potato",
+		ITEM_NAME : "Potato",
+		ITEM_DESC : "Potatos perfect for any dish.",
+		ITEM_PRICE : 16.25,
+		ITEM_SELL : 6.50,
+		ITEM_MAX : 20,
+		ITEM_PLANT : 5
 	}
 }
 
@@ -71,3 +174,5 @@ const ITEM_RESOURCE_PATH : String = "res://Data/Items/Resources/"
 
 # File Extensions.
 const PREFIX_RESOURCE : String = ".tres"
+
+var score: float = 0

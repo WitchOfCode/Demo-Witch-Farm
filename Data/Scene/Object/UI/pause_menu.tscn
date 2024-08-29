@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://trqjtf8lawp6"]
 
-[ext_resource type="Script" path="res://Data/Scene/Script/pause_menu.gd" id="1_qhyqs"]
-[ext_resource type="Shader" path="res://Data/Scene/Object/UI/pause_menu.gdshader" id="2_5htm3"]
+[ext_resource type="Script" path="res://Data/Scene/Script/UI/pause_menu.gd" id="1_24chv"]
+[ext_resource type="Shader" path="res://Data/Scene/Script/Shaders/pause_menu.gdshader" id="2_vwnvk"]
 [ext_resource type="Texture2D" uid="uid://bqod0c2tjabm7" path="res://Resources/UI/wood plaque.png" id="3_0hsi3"]
 [ext_resource type="Texture2D" uid="uid://df5acq0sogcl3" path="res://Resources/UI/wood plaque pressed.png" id="4_8muvc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xvjwm"]
-shader = ExtResource("2_5htm3")
+shader = ExtResource("2_vwnvk")
 shader_parameter/amount = 3.0
 
 [node name="PauseMenu" type="Control"]
@@ -20,7 +20,7 @@ offset_right = -560.0
 offset_bottom = -284.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qhyqs")
+script = ExtResource("1_24chv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_xvjwm")
